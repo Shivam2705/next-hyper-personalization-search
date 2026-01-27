@@ -28,7 +28,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep2",
       name: "Ivory Silk Blouse",
-      image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
       price: "£52",
       date: "Dec 2025",
       category: "Tops",
@@ -67,7 +67,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp1",
       name: "Boys' Grey School Jumper",
-      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
       price: "£14",
       date: "Jan 2026",
       category: "Kidswear",
@@ -85,7 +85,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp3",
       name: "Boys' Navy Raincoat",
-      image: "https://images.unsplash.com/photo-1445796886651-d31a2c15f3ce?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
       price: "£32",
       date: "Oct 2025",
       category: "Kidswear",
@@ -115,7 +115,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap1",
       name: "Cobalt Blue Wrap Dress",
-      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
       price: "£72",
       date: "Jan 2026",
       category: "Eveningwear",
@@ -133,7 +133,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap3",
       name: "Orange Cropped Blazer",
-      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
       price: "£68",
       date: "Nov 2025",
       category: "Statement Pieces",

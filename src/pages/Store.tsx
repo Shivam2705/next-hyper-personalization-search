@@ -53,7 +53,7 @@ const allProducts: Product[] = [
     name: "Navy Wrap Dress",
     price: 85,
     priceDisplay: "£85",
-    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 88,
     personalizationScores: {
@@ -88,7 +88,7 @@ const allProducts: Product[] = [
     name: "White Crepe Blouse",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&h=600&fit=crop",
     category: "Tops",
     popularity: 82,
     personalizationScores: {
@@ -123,7 +123,7 @@ const allProducts: Product[] = [
     name: "Grey Tailored Trousers",
     price: 55,
     priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 85,
     personalizationScores: {
@@ -158,7 +158,7 @@ const allProducts: Product[] = [
     name: "Camel Wool Coat",
     price: 120,
     priceDisplay: "£120",
-    image: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=600&fit=crop",
     category: "Outerwear",
     popularity: 90,
     personalizationScores: {
@@ -194,7 +194,7 @@ const allProducts: Product[] = [
     name: "Boys' Navy Polo Shirt",
     price: 12,
     priceDisplay: "£12",
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop",
     category: "Kidswear",
     popularity: 94,
     personalizationScores: {
@@ -229,7 +229,7 @@ const allProducts: Product[] = [
     name: "Men's Cotton Multi-Pack Tees (5)",
     price: 25,
     priceDisplay: "£25",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=600&fit=crop",
     category: "Menswear Basics",
     popularity: 96,
     personalizationScores: {
@@ -264,7 +264,7 @@ const allProducts: Product[] = [
     name: "Boys' Denim Jacket",
     price: 28,
     priceDisplay: "£28",
-    image: "https://images.unsplash.com/photo-1445796886651-d31a2c15f3ce?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=400&h=600&fit=crop",
     category: "Kidswear",
     popularity: 88,
     personalizationScores: {
@@ -299,7 +299,7 @@ const allProducts: Product[] = [
     name: "Men's Casual Weekend Shirt",
     price: 35,
     priceDisplay: "£35",
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop",
     category: "Menswear",
     popularity: 82,
     personalizationScores: {
@@ -335,7 +335,7 @@ const allProducts: Product[] = [
     name: "Black Sequin Party Dress",
     price: 89,
     priceDisplay: "£89",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
     category: "Eveningwear",
     popularity: 78,
     personalizationScores: {
@@ -370,7 +370,7 @@ const allProducts: Product[] = [
     name: "Fuchsia Satin Blazer",
     price: 75,
     priceDisplay: "£75",
-    image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&h=600&fit=crop",
     category: "Statement Pieces",
     popularity: 72,
     personalizationScores: {
@@ -405,7 +405,7 @@ const allProducts: Product[] = [
     name: "Floral Maxi Dress",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1495385794356-15371f348c31?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop",
     category: "Statement Pieces",
     popularity: 75,
     personalizationScores: {
@@ -440,7 +440,7 @@ const allProducts: Product[] = [
     name: "Red Evening Gown",
     price: 95,
     priceDisplay: "£95",
-    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=600&fit=crop",
     category: "Eveningwear",
     popularity: 70,
     personalizationScores: {
