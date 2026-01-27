@@ -15,12 +15,11 @@ interface PastPurchase {
 // Past purchases - DIFFERENT from current recommendations but establish patterns
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
-    // Emma's past: Establishes workwear, neutral tones, structured fits pattern
-    // These are DIFFERENT from recommendations but inspire them
+    // Emma's past: Female professional workwear - structured, clean, elegant
     {
       id: "ep1",
-      name: "Black Ponte Blazer",
-      image: "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=200&h=250&fit=crop",
+      name: "Black Tailored Blazer",
+      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
       price: "£89",
       date: "Oct 2024",
       category: "Workwear",
@@ -28,8 +27,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep2",
-      name: "Ivory Satin Blouse",
-      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
+      name: "Cream Silk Camisole",
+      image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
       price: "£52",
       date: "Sep 2024",
       category: "Tops",
@@ -37,8 +36,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep3",
-      name: "Black Wide-Leg Trousers",
-      image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=200&h=250&fit=crop",
+      name: "Black Pencil Skirt",
+      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
       price: "£48",
       date: "Aug 2024",
       category: "Workwear",
@@ -46,8 +45,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep4",
-      name: "Oatmeal Cashmere Cardigan",
-      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
+      name: "Beige Cashmere Wrap",
+      image: "https://images.unsplash.com/photo-1525450824786-227cbef70703?w=200&h=250&fit=crop",
       price: "£75",
       date: "Jul 2024",
       category: "Knitwear",
@@ -55,8 +54,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep5",
-      name: "Nude Court Heels",
-      image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=200&h=250&fit=crop",
+      name: "Nude Pointed Heels",
+      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£68",
       date: "Jun 2024",
       category: "Footwear",
