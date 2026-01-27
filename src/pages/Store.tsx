@@ -47,12 +47,14 @@ export interface Product {
 
 const allProducts: Product[] = [
   // === EMMA'S TOP PICKS: Professional Workwear ===
+  // NOTE: These are NEW products, different from Emma's past purchases:
+  // Past: Black Ponte Blazer, Ivory Satin Blouse, Black Wide-Leg Trousers, Oatmeal Cashmere Cardigan, Nude Court Heels
   {
     id: 1,
-    name: "Navy Midi Shirtdress",
+    name: "Navy Belted Shirtdress",
     price: 85,
     priceDisplay: "£85",
-    image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 88,
     personalizationScores: {
@@ -87,7 +89,7 @@ const allProducts: Product[] = [
     name: "White Silk Office Blouse",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=600&fit=crop",
     category: "Tops",
     popularity: 82,
     personalizationScores: {
@@ -122,7 +124,7 @@ const allProducts: Product[] = [
     name: "Charcoal Wool Trousers",
     price: 55,
     priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 85,
     personalizationScores: {
