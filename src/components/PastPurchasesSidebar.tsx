@@ -12,150 +12,150 @@ interface PastPurchase {
   rating?: number;
 }
 
-// Past purchases aligned with each persona's profile, gender, and recommendations
+// Past purchases - DIFFERENT from current recommendations but establish patterns
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
-    // Emma: Professional woman, workwear focus, neutral tones, structured fits
-    // Aligns with: Navy Midi Shirtdress, White Silk Blouse, Charcoal Wool Trousers, Camel Wool Coat recommendations
+    // Emma's past: Establishes workwear, neutral tones, structured fits pattern
+    // These are DIFFERENT from recommendations but inspire them
     {
       id: "ep1",
-      name: "Navy Tailored Blazer",
+      name: "Black Ponte Blazer",
       image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
-      price: "£95",
+      price: "£89",
       date: "Oct 2024",
       category: "Workwear",
       rating: 5
     },
     {
       id: "ep2",
-      name: "White Cotton Shirt",
-      image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=200&h=250&fit=crop",
-      price: "£48",
+      name: "Ivory Satin Blouse",
+      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
+      price: "£52",
       date: "Sep 2024",
       category: "Tops",
       rating: 5
     },
     {
       id: "ep3",
-      name: "Black Wool Trousers",
-      image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=200&h=250&fit=crop",
-      price: "£58",
+      name: "Black Wide-Leg Trousers",
+      image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop",
+      price: "£48",
       date: "Aug 2024",
       category: "Workwear",
       rating: 5
     },
     {
       id: "ep4",
-      name: "Camel Knit Jumper",
+      name: "Oatmeal Cashmere Cardigan",
       image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=250&fit=crop",
-      price: "£55",
+      price: "£75",
       date: "Jul 2024",
       category: "Knitwear",
       rating: 4
     },
     {
       id: "ep5",
-      name: "Black Leather Tote Bag",
-      image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=200&h=250&fit=crop",
-      price: "£75",
+      name: "Nude Court Heels",
+      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
+      price: "£68",
       date: "Jun 2024",
-      category: "Accessories",
+      category: "Footwear",
       rating: 5
     }
   ],
   david: [
-    // David: Family man, value-conscious, kidswear + casual menswear, practical choices
-    // Aligns with: Boys' Navy Polo, Multi-Pack Tees, Kids' Denim Jacket, Men's Casual Shirt recommendations
+    // David's past: Establishes family value, kidswear + menswear basics pattern
+    // These are DIFFERENT from recommendations but inspire them
     {
       id: "dp1",
-      name: "Boys' School Polo (2pk)",
-      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
-      price: "£18",
+      name: "Boys' Grey School Jumper",
+      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
+      price: "£14",
       date: "Sep 2024",
       category: "Kidswear",
       rating: 5
     },
     {
       id: "dp2",
-      name: "Men's Blue Denim Jeans",
+      name: "Men's Black Joggers",
       image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=200&h=250&fit=crop",
-      price: "£35",
+      price: "£28",
       date: "Aug 2024",
       category: "Menswear",
       rating: 4
     },
     {
       id: "dp3",
-      name: "Boys' Navy Puffer Jacket",
-      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
-      price: "£38",
+      name: "Boys' Waterproof Raincoat",
+      image: "https://images.unsplash.com/photo-1502451885777-5d53fd7e1e7e?w=200&h=250&fit=crop",
+      price: "£32",
       date: "Jul 2024",
       category: "Kidswear",
       rating: 5
     },
     {
       id: "dp4",
-      name: "Men's Grey Cotton T-Shirts (3pk)",
-      image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=200&h=250&fit=crop",
-      price: "£22",
+      name: "Men's White T-Shirt (2pk)",
+      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=250&fit=crop",
+      price: "£16",
       date: "Jun 2024",
       category: "Menswear Basics",
       rating: 5
     },
     {
       id: "dp5",
-      name: "Men's Checked Casual Shirt",
-      image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200&h=250&fit=crop",
-      price: "£32",
+      name: "Men's Navy Hoodie",
+      image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=250&fit=crop",
+      price: "£35",
       date: "May 2024",
       category: "Menswear",
       rating: 4
     }
   ],
   aisha: [
-    // Aisha: Trend-forward woman, bold colours, eveningwear, statement pieces
-    // Aligns with: Black Sequin Party Dress, Fuchsia Satin Blazer, Floral Maxi Dress, Red Evening Gown recommendations
+    // Aisha's past: Establishes bold, trend-forward, eveningwear pattern
+    // These are DIFFERENT from recommendations but inspire them
     {
       id: "ap1",
-      name: "Emerald Satin Midi Dress",
+      name: "Cobalt Blue Wrap Dress",
       image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop",
-      price: "£78",
+      price: "£72",
       date: "Oct 2024",
       category: "Eveningwear",
       rating: 5
     },
     {
       id: "ap2",
-      name: "Gold Statement Earrings",
+      name: "Silver Chain Necklace",
       image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=250&fit=crop",
-      price: "£28",
+      price: "£32",
       date: "Sep 2024",
       category: "Accessories",
       rating: 5
     },
     {
       id: "ap3",
-      name: "Pink Satin Wrap Top",
-      image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
-      price: "£42",
+      name: "Orange Cropped Blazer",
+      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
+      price: "£68",
       date: "Aug 2024",
       category: "Statement Pieces",
       rating: 5
     },
     {
       id: "ap4",
-      name: "Black Strappy Heels",
+      name: "Black Platform Boots",
       image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
-      price: "£65",
+      price: "£85",
       date: "Jul 2024",
       category: "Footwear",
       rating: 5
     },
     {
       id: "ap5",
-      name: "Bold Floral Maxi Skirt",
-      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
-      price: "£52",
+      name: "Tropical Print Midi Skirt",
+      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
+      price: "£48",
       date: "Jun 2024",
       category: "Statement Pieces",
       rating: 4
@@ -163,22 +163,25 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   ]
 };
 
-// Why recommendations match past purchases
+// Why NEW recommendations match past purchase PATTERNS (not same products)
 const purchaseInsights: Record<string, string[]> = {
   emma: [
-    "Navy Midi Shirtdress → matches blazer & trouser workwear pattern",
-    "White Silk Blouse → extends her white shirt collection",
-    "Camel Wool Coat → complements neutral knitwear preference"
+    "New: Navy Shirtdress → Extends workwear rotation (you own Black Blazer)",
+    "New: White Silk Blouse → Complements Ivory Satin Blouse you loved",
+    "New: Charcoal Trousers → Different cut from your Wide-Leg pair",
+    "New: Camel Coat → Neutral outerwear to match your Oatmeal Cardigan"
   ],
   david: [
-    "Boys' Navy Polo → continues school uniform multi-buy pattern",
-    "Multi-Pack Tees → matches his value-focused basics buying",
-    "Kids' Denim Jacket → aligns with boys' outerwear purchases"
+    "New: Navy Polo → School essentials (you bought Grey Jumper)",
+    "New: Multi-Pack Tees → Value basics like your 2pk T-shirts",
+    "New: Denim Jacket → Outerwear rotation after Raincoat purchase",
+    "New: Casual Shirt → Weekend upgrade from your Hoodie"
   ],
   aisha: [
-    "Black Sequin Dress → extends her eveningwear collection",
-    "Fuchsia Satin Blazer → matches bold colour preference (pink top)",
-    "Floral Maxi Dress → continues her bold print pattern"
+    "New: Black Sequin Dress → Statement evening (you own Cobalt Wrap)",
+    "New: Fuchsia Blazer → Bold colour like your Orange Blazer success",
+    "New: Floral Maxi → Print pattern extends your Tropical Skirt style",
+    "New: Red Gown → Event-ready addition to your occasion wardrobe"
   ]
 };
 
@@ -207,15 +210,15 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
           <ShoppingBag className="w-5 h-5 text-primary-foreground" />
         </div>
         <div>
-          <h3 className="font-semibold text-sm">{persona.name}'s Purchases</h3>
-          <p className="text-xs text-muted-foreground">Last 6 months</p>
+          <h3 className="font-semibold text-sm">{persona.name}'s History</h3>
+          <p className="text-xs text-muted-foreground">Already purchased</p>
         </div>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-2 gap-2 mb-4">
         <div className="bg-secondary/30 rounded-lg p-2 text-center">
-          <p className="text-xs text-muted-foreground">Total Spent</p>
+          <p className="text-xs text-muted-foreground">6-Month Spend</p>
           <p className="font-bold text-primary">£{totalSpent}</p>
         </div>
         <div className="bg-secondary/30 rounded-lg p-2 text-center">
@@ -230,7 +233,7 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
       {/* Favorite Category */}
       <div className="flex items-center gap-2 mb-4 p-2 bg-primary/5 rounded-lg border border-primary/20">
         <TrendingUp className="w-4 h-4 text-primary" />
-        <span className="text-xs">Top category: <span className="font-medium text-primary">{favoriteCategory}</span></span>
+        <span className="text-xs">Preference: <span className="font-medium text-primary">{favoriteCategory}</span></span>
       </div>
 
       {/* Purchase List */}
@@ -276,11 +279,11 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
         ))}
       </div>
 
-      {/* Why Recommendations Match */}
+      {/* Why NEW Recommendations */}
       <div className="pt-3 border-t border-border/50">
         <div className="flex items-center gap-2 mb-2">
           <Package className="w-3.5 h-3.5 text-primary" />
-          <span className="text-xs font-medium">Why These Recommendations</span>
+          <span className="text-xs font-medium">New Items Inspired By</span>
         </div>
         <div className="space-y-1.5">
           {insights.map((insight, idx) => (
