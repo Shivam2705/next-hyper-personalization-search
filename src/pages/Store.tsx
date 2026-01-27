@@ -53,7 +53,7 @@ const allProducts: Product[] = [
     name: "Navy Wrap Dress",
     price: 85,
     priceDisplay: "£85",
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 88,
     personalizationScores: {
@@ -88,7 +88,7 @@ const allProducts: Product[] = [
     name: "White Crepe Blouse",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=400&h=600&fit=crop",
     category: "Tops",
     popularity: 82,
     personalizationScores: {
@@ -123,7 +123,7 @@ const allProducts: Product[] = [
     name: "Grey Tailored Trousers",
     price: 55,
     priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1551854838-212c50b4c184?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 85,
     personalizationScores: {
@@ -158,7 +158,7 @@ const allProducts: Product[] = [
     name: "Camel Wool Coat",
     price: 120,
     priceDisplay: "£120",
-    image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?w=400&h=600&fit=crop",
     category: "Outerwear",
     popularity: 90,
     personalizationScores: {

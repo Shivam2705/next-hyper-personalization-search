@@ -19,7 +19,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep1",
       name: "Black Tailored Blazer",
-      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
       price: "£89",
       date: "Jan 2026",
       category: "Workwear",
@@ -28,7 +28,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep2",
       name: "Ivory Silk Blouse",
-      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
       price: "£52",
       date: "Dec 2025",
       category: "Tops",
@@ -37,7 +37,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep3",
       name: "Black Pencil Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1577900232427-18219b9166a0?w=200&h=250&fit=crop",
       price: "£48",
       date: "Nov 2025",
       category: "Workwear",
