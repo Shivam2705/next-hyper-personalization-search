@@ -698,7 +698,7 @@ const Store = () => {
           filters={filters}
           onFilterChange={setFilters}
           onClearAll={clearAllFilters}
-          personaName={persona.name}
+          personaId={personaId}
         />
 
         {/* Main Content with Sidebar */}

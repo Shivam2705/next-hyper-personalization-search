@@ -1,4 +1,4 @@
-import { ShoppingBag, Calendar, Star, TrendingUp } from "lucide-react";
+import { ShoppingBag, Calendar, Star, TrendingUp, Package } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Persona } from "@/pages/Login";
 
@@ -12,13 +12,15 @@ interface PastPurchase {
   rating?: number;
 }
 
-// Past purchases aligned with each persona's profile and recommendations
+// Past purchases aligned with each persona's profile, gender, and recommendations
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
+    // Emma: Professional woman, workwear focus, neutral tones, structured fits
+    // Aligns with: Navy Midi Shirtdress, White Silk Blouse, Charcoal Wool Trousers, Camel Wool Coat recommendations
     {
       id: "ep1",
-      name: "Black Tailored Blazer",
-      image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop",
+      name: "Navy Tailored Blazer",
+      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
       price: "£95",
       date: "Oct 2024",
       category: "Workwear",
@@ -26,54 +28,56 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep2",
-      name: "Navy Pencil Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
-      price: "£45",
+      name: "White Cotton Shirt",
+      image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=200&h=250&fit=crop",
+      price: "£48",
       date: "Sep 2024",
-      category: "Workwear",
+      category: "Tops",
       rating: 5
     },
     {
       id: "ep3",
-      name: "Cream Silk Blouse",
-      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
-      price: "£68",
-      date: "Aug 2024",
-      category: "Tops",
-      rating: 4
-    },
-    {
-      id: "ep4",
-      name: "Grey Wool Trousers",
-      image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop",
+      name: "Black Wool Trousers",
+      image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=200&h=250&fit=crop",
       price: "£58",
-      date: "Jul 2024",
+      date: "Aug 2024",
       category: "Workwear",
       rating: 5
     },
     {
+      id: "ep4",
+      name: "Camel Knit Jumper",
+      image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=250&fit=crop",
+      price: "£55",
+      date: "Jul 2024",
+      category: "Knitwear",
+      rating: 4
+    },
+    {
       id: "ep5",
-      name: "Beige Trench Coat",
-      image: "https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?w=200&h=250&fit=crop",
-      price: "£110",
+      name: "Black Leather Tote Bag",
+      image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=200&h=250&fit=crop",
+      price: "£75",
       date: "Jun 2024",
-      category: "Outerwear",
+      category: "Accessories",
       rating: 5
     }
   ],
   david: [
+    // David: Family man, value-conscious, kidswear + casual menswear, practical choices
+    // Aligns with: Boys' Navy Polo, Multi-Pack Tees, Kids' Denim Jacket, Men's Casual Shirt recommendations
     {
       id: "dp1",
-      name: "Boys' School Shirts (3pk)",
-      image: "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=200&h=250&fit=crop",
-      price: "£22",
+      name: "Boys' School Polo (2pk)",
+      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
+      price: "£18",
       date: "Sep 2024",
       category: "Kidswear",
       rating: 5
     },
     {
       id: "dp2",
-      name: "Men's Blue Jeans",
+      name: "Men's Blue Denim Jeans",
       image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=200&h=250&fit=crop",
       price: "£35",
       date: "Aug 2024",
@@ -82,63 +86,65 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "dp3",
-      name: "Kids' Football Boots",
-      image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?w=200&h=250&fit=crop",
-      price: "£32",
+      name: "Boys' Navy Puffer Jacket",
+      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
+      price: "£38",
       date: "Jul 2024",
-      category: "Footwear",
+      category: "Kidswear",
       rating: 5
     },
     {
       id: "dp4",
-      name: "Men's Casual Polo",
-      image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=200&h=250&fit=crop",
-      price: "£18",
+      name: "Men's Grey Cotton T-Shirts (3pk)",
+      image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=200&h=250&fit=crop",
+      price: "£22",
       date: "Jun 2024",
-      category: "Menswear",
-      rating: 4
+      category: "Menswear Basics",
+      rating: 5
     },
     {
       id: "dp5",
-      name: "Boys' Winter Coat",
-      image: "https://images.unsplash.com/photo-1502451885777-5d53fd7e1e7e?w=200&h=250&fit=crop",
-      price: "£45",
-      date: "Nov 2023",
-      category: "Kidswear",
-      rating: 5
+      name: "Men's Checked Casual Shirt",
+      image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=200&h=250&fit=crop",
+      price: "£32",
+      date: "May 2024",
+      category: "Menswear",
+      rating: 4
     }
   ],
   aisha: [
+    // Aisha: Trend-forward woman, bold colours, eveningwear, statement pieces
+    // Aligns with: Black Sequin Party Dress, Fuchsia Satin Blazer, Floral Maxi Dress, Red Evening Gown recommendations
     {
       id: "ap1",
-      name: "Gold Statement Earrings",
-      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=250&fit=crop",
-      price: "£28",
-      date: "Oct 2024",
-      category: "Accessories",
-      rating: 5
-    },
-    {
-      id: "ap2",
-      name: "Emerald Green Dress",
+      name: "Emerald Satin Midi Dress",
       image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop",
-      price: "£75",
-      date: "Sep 2024",
+      price: "£78",
+      date: "Oct 2024",
       category: "Eveningwear",
       rating: 5
     },
     {
+      id: "ap2",
+      name: "Gold Statement Earrings",
+      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=250&fit=crop",
+      price: "£28",
+      date: "Sep 2024",
+      category: "Accessories",
+      rating: 5
+    },
+    {
       id: "ap3",
-      name: "Pink Satin Top",
+      name: "Pink Satin Wrap Top",
       image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
       price: "£42",
       date: "Aug 2024",
       category: "Statement Pieces",
-      rating: 4
+      rating: 5
     },
     {
       id: "ap4",
-      name: "Strappy Heeled Sandals",
+      name: "Black Strappy Heels",
       image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£65",
       date: "Jul 2024",
@@ -147,13 +153,32 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ap5",
-      name: "Leopard Print Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
-      price: "£48",
+      name: "Bold Floral Maxi Skirt",
+      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
+      price: "£52",
       date: "Jun 2024",
       category: "Statement Pieces",
-      rating: 5
+      rating: 4
     }
+  ]
+};
+
+// Why recommendations match past purchases
+const purchaseInsights: Record<string, string[]> = {
+  emma: [
+    "Navy Midi Shirtdress → matches blazer & trouser workwear pattern",
+    "White Silk Blouse → extends her white shirt collection",
+    "Camel Wool Coat → complements neutral knitwear preference"
+  ],
+  david: [
+    "Boys' Navy Polo → continues school uniform multi-buy pattern",
+    "Multi-Pack Tees → matches his value-focused basics buying",
+    "Kids' Denim Jacket → aligns with boys' outerwear purchases"
+  ],
+  aisha: [
+    "Black Sequin Dress → extends her eveningwear collection",
+    "Fuchsia Satin Blazer → matches bold colour preference (pink top)",
+    "Floral Maxi Dress → continues her bold print pattern"
   ]
 };
 
@@ -163,6 +188,7 @@ interface PastPurchasesSidebarProps {
 
 const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
   const purchases = pastPurchasesByPersona[persona.id] || [];
+  const insights = purchaseInsights[persona.id] || [];
   
   // Calculate stats
   const totalSpent = purchases.reduce((sum, p) => sum + parseInt(p.price.replace('£', '')), 0);
@@ -181,7 +207,7 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
           <ShoppingBag className="w-5 h-5 text-primary-foreground" />
         </div>
         <div>
-          <h3 className="font-semibold text-sm">Past Purchases</h3>
+          <h3 className="font-semibold text-sm">{persona.name}'s Purchases</h3>
           <p className="text-xs text-muted-foreground">Last 6 months</p>
         </div>
       </div>
@@ -208,17 +234,20 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
       </div>
 
       {/* Purchase List */}
-      <div className="space-y-3">
+      <div className="space-y-3 mb-4">
         {purchases.map((purchase) => (
           <div 
             key={purchase.id} 
             className="flex gap-3 p-2 rounded-lg bg-card/50 hover:bg-secondary/30 transition-colors group"
           >
-            <div className="w-12 h-14 rounded-md overflow-hidden flex-shrink-0 border border-border/50">
+            <div className="w-12 h-14 rounded-md overflow-hidden flex-shrink-0 border border-border/50 bg-secondary/20">
               <img 
                 src={purchase.image} 
                 alt={purchase.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=250&fit=crop';
+                }}
               />
             </div>
             <div className="flex-1 min-w-0">
@@ -247,13 +276,19 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
         ))}
       </div>
 
-      {/* Pattern Insight */}
-      <div className="mt-4 pt-3 border-t border-border/50">
-        <p className="text-xs text-muted-foreground text-center italic">
-          {persona.id === 'emma' && "Pattern: Professional workwear, neutral tones, quality fabrics"}
-          {persona.id === 'david' && "Pattern: Family-focused, value multi-packs, durable kidswear"}
-          {persona.id === 'aisha' && "Pattern: Statement pieces, bold colours, evening & event wear"}
-        </p>
+      {/* Why Recommendations Match */}
+      <div className="pt-3 border-t border-border/50">
+        <div className="flex items-center gap-2 mb-2">
+          <Package className="w-3.5 h-3.5 text-primary" />
+          <span className="text-xs font-medium">Why These Recommendations</span>
+        </div>
+        <div className="space-y-1.5">
+          {insights.map((insight, idx) => (
+            <p key={idx} className="text-[10px] text-muted-foreground leading-tight pl-2 border-l-2 border-primary/30">
+              {insight}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
