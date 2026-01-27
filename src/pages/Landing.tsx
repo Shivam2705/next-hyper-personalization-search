@@ -8,12 +8,12 @@ import {
   Shield,
   ArrowRight,
   Zap,
-  BarChart3,
   RefreshCw
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Customer360Chart from "@/components/Customer360Chart";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import ComparisonTable from "@/components/ComparisonTable";
 
 const valueProps = [
   {
@@ -126,73 +126,38 @@ const Landing = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="glass-card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Brain className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Agentic Intelligence</h3>
-                    <p className="text-muted-foreground">
-                      Unlike traditional ML models, our AI agent reasons about each shopper, 
-                      making contextual decisions about product ranking, visual presentation, and cross-sell strategy.
-                    </p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card p-6 hover-lift">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-primary" />
               </div>
-
-              <div className="glass-card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Target className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Consumer 360° Foundation</h3>
-                    <p className="text-muted-foreground">
-                      Every personalization decision is powered by a unified view of the customer — 
-                      combining online behavior, store visits, purchase history, and engagement signals.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="glass-card p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Explainable Decisions</h3>
-                    <p className="text-muted-foreground">
-                      Every ranking decision comes with clear reasoning. Understand why each product 
-                      appears where it does — from style match to return risk prediction.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">Agentic Intelligence</h3>
+              <p className="text-muted-foreground">
+                Unlike traditional ML models, our AI agent reasons about each shopper, 
+                making contextual decisions about product ranking and cross-sell strategy.
+              </p>
             </div>
 
-            <div className="relative">
-              <div className="glass-card p-8 text-center">
-                <BarChart3 className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Traditional vs. Agentic</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
-                    <span className="text-muted-foreground">Rule-Based</span>
-                    <span className="text-destructive">Static Segments</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
-                    <span className="text-muted-foreground">Collaborative Filtering</span>
-                    <span className="text-yellow-500">Similar Users</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-primary/20 rounded-lg border border-primary/30">
-                    <span className="text-foreground font-medium">Agentic AI</span>
-                    <span className="text-primary font-semibold">Individual Intelligence</span>
-                  </div>
-                </div>
+            <div className="glass-card p-6 hover-lift">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-primary" />
               </div>
+              <h3 className="text-xl font-semibold mb-2">Consumer 360° Foundation</h3>
+              <p className="text-muted-foreground">
+                Every decision powered by a unified customer view — combining online behavior, 
+                store visits, purchase history, and engagement signals.
+              </p>
+            </div>
+
+            <div className="glass-card p-6 hover-lift">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Explainable Decisions</h3>
+              <p className="text-muted-foreground">
+                Every ranking decision comes with clear reasoning — from style match 
+                to return risk prediction. Full transparency.
+              </p>
             </div>
           </div>
         </div>
@@ -214,6 +179,9 @@ const Landing = () => {
           <Customer360Chart />
         </div>
       </section>
+
+      {/* Comparison Table Section */}
+      <ComparisonTable />
 
       {/* How It Works - Enhanced Section */}
       <HowItWorksSection />

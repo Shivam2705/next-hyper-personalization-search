@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { 
   Sparkles, 
-  ArrowUpDown, 
   ChevronDown,
   Brain,
   TrendingUp,
@@ -10,7 +9,6 @@ import {
   Star,
   SortAsc,
   LogOut,
-  User,
   ArrowDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,6 +21,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import ProductCardEnhanced from "@/components/ProductCardEnhanced";
 import PersonaProfile360 from "@/components/PersonaProfile360";
+import PastPurchasesSidebar from "@/components/PastPurchasesSidebar";
+import ProductFilters, { FilterState } from "@/components/ProductFilters";
 import { personas, Persona } from "./Login";
 
 export interface Product {
@@ -559,12 +559,53 @@ const Store = () => {
   const personaId = searchParams.get("persona") || "emma";
   const [sortBy, setSortBy] = useState<SortOption>("hyper-personalization");
   const [showReasoningForAll, setShowReasoningForAll] = useState(false);
+  const [filters, setFilters] = useState<FilterState>({
+    for: [],
+    brands: [],
+    department: [],
+    size: [],
+    color: [],
+    sizeType: [],
+    use: [],
+    length: [],
+    style: [],
+    pattern: [],
+    sleeve: [],
+    material: [],
+    fit: [],
+    priceRange: [0, 200]
+  });
 
   const persona = personas.find(p => p.id === personaId) || personas[0];
 
+  const clearAllFilters = () => {
+    setFilters({
+      for: [],
+      brands: [],
+      department: [],
+      size: [],
+      color: [],
+      sizeType: [],
+      use: [],
+      length: [],
+      style: [],
+      pattern: [],
+      sleeve: [],
+      material: [],
+      fit: [],
+      priceRange: [0, 200]
+    });
+  };
+
   const sortedProducts = useMemo(() => {
-    const products = [...allProducts];
+    let products = [...allProducts];
     
+    // Apply filters
+    if (filters.priceRange[0] > 0 || filters.priceRange[1] < 200) {
+      products = products.filter(p => p.price >= filters.priceRange[0] && p.price <= filters.priceRange[1]);
+    }
+    
+    // Sort
     switch (sortBy) {
       case "hyper-personalization":
         return products.sort((a, b) => 
@@ -587,7 +628,7 @@ const Store = () => {
       default:
         return products;
     }
-  }, [sortBy, personaId, persona.intent]);
+  }, [sortBy, personaId, persona.intent, filters]);
 
   const currentSortOption = sortOptions.find(opt => opt.value === sortBy) || sortOptions[0];
   const isHyperPersonalized = sortBy === "hyper-personalization";
@@ -636,7 +677,7 @@ const Store = () => {
         <PersonaProfile360 persona={persona} />
 
         {/* Curated Collection Header */}
-        <div className="mb-8">
+        <div className="mb-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
               <ArrowDown className="w-5 h-5 text-primary-foreground animate-bounce" />
@@ -652,100 +693,119 @@ const Store = () => {
           </div>
         </div>
 
-        {/* Personalization Banner */}
-        {isHyperPersonalized && (
-          <div className="glass-card p-4 mb-6 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-transparent" />
-            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
-                <Brain className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <div className="flex-1">
-                <div className="text-sm font-medium text-foreground mb-1">
-                  Agentic AI Ranking Active
+        {/* Filters Section */}
+        <ProductFilters 
+          filters={filters}
+          onFilterChange={setFilters}
+          onClearAll={clearAllFilters}
+          personaName={persona.name}
+        />
+
+        {/* Main Content with Sidebar */}
+        <div className="flex gap-6">
+          {/* Past Purchases Sidebar - Left */}
+          <aside className="hidden lg:block w-72 flex-shrink-0">
+            <PastPurchasesSidebar persona={persona} />
+          </aside>
+
+          {/* Products Section - Right */}
+          <div className="flex-1 min-w-0">
+            {/* Personalization Banner */}
+            {isHyperPersonalized && (
+              <div className="glass-card p-4 mb-6 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-transparent" />
+                <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                    <Brain className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-sm font-medium text-foreground mb-1">
+                      Agentic AI Ranking Active
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      Products ranked by personalization score · {persona.style} styles · {persona.priceRange}
+                    </div>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setShowReasoningForAll(!showReasoningForAll)}
+                    className="border-primary/30 text-primary hover:bg-primary/10"
+                  >
+                    {showReasoningForAll ? "Hide" : "Expand"} All Reasoning
+                  </Button>
                 </div>
-                <div className="text-xs text-muted-foreground">
-                  Products ranked by personalization score · {persona.style} styles · {persona.priceRange}
-                </div>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowReasoningForAll(!showReasoningForAll)}
-                className="border-primary/30 text-primary hover:bg-primary/10"
-              >
-                {showReasoningForAll ? "Hide" : "Expand"} All Reasoning
-              </Button>
+            )}
+
+            {/* Sort Controls */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+              <p className="text-sm text-muted-foreground">
+                Showing {sortedProducts.length} products
+              </p>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="gap-2 min-w-[280px] justify-between border-border hover:bg-secondary">
+                    <div className="flex items-center gap-2">
+                      <currentSortOption.icon className="w-4 h-4 text-primary" />
+                      <span>{currentSortOption.label}</span>
+                    </div>
+                    <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-[280px]">
+                  <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground">
+                    AI-Powered Sorting
+                  </div>
+                  <DropdownMenuItem 
+                    onClick={() => setSortBy("hyper-personalization")}
+                    className={`gap-3 ${sortBy === "hyper-personalization" ? "bg-primary/10 text-primary" : ""}`}
+                  >
+                    <Brain className="w-4 h-4" />
+                    <div className="flex-1">
+                      <div className="font-medium">Hyper-Personalization Score</div>
+                      <div className="text-xs text-muted-foreground">AI-ranked for you</div>
+                    </div>
+                    {sortBy === "hyper-personalization" && <Sparkles className="w-4 h-4 text-primary" />}
+                  </DropdownMenuItem>
+                  
+                  <DropdownMenuSeparator />
+                  <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground">
+                    Standard Sorting
+                  </div>
+                  
+                  {sortOptions.filter(opt => opt.value !== "hyper-personalization").map((option) => (
+                    <DropdownMenuItem
+                      key={option.value}
+                      onClick={() => setSortBy(option.value)}
+                      className={`gap-3 ${sortBy === option.value ? "bg-secondary" : ""}`}
+                    >
+                      <option.icon className="w-4 h-4" />
+                      <div className="flex-1">
+                        <div className="font-medium">{option.label}</div>
+                        <div className="text-xs text-muted-foreground">{option.description}</div>
+                      </div>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+
+            {/* Product Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
+              {sortedProducts.map((product, index) => (
+                <ProductCardEnhanced
+                  key={product.id}
+                  product={product}
+                  personaId={personaId}
+                  showReasoning={isHyperPersonalized}
+                  showReasoningExpanded={showReasoningForAll}
+                  rank={isHyperPersonalized ? index + 1 : undefined}
+                />
+              ))}
             </div>
           </div>
-        )}
-
-        {/* Sort Controls */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-          <p className="text-sm text-muted-foreground">
-            Showing {sortedProducts.length} products
-          </p>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="gap-2 min-w-[280px] justify-between border-border hover:bg-secondary">
-                <div className="flex items-center gap-2">
-                  <currentSortOption.icon className="w-4 h-4 text-primary" />
-                  <span>{currentSortOption.label}</span>
-                </div>
-                <ChevronDown className="w-4 h-4 text-muted-foreground" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-[280px]">
-              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground">
-                AI-Powered Sorting
-              </div>
-              <DropdownMenuItem 
-                onClick={() => setSortBy("hyper-personalization")}
-                className={`gap-3 ${sortBy === "hyper-personalization" ? "bg-primary/10 text-primary" : ""}`}
-              >
-                <Brain className="w-4 h-4" />
-                <div className="flex-1">
-                  <div className="font-medium">Hyper-Personalization Score</div>
-                  <div className="text-xs text-muted-foreground">AI-ranked for you</div>
-                </div>
-                {sortBy === "hyper-personalization" && <Sparkles className="w-4 h-4 text-primary" />}
-              </DropdownMenuItem>
-              
-              <DropdownMenuSeparator />
-              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground">
-                Standard Sorting
-              </div>
-              
-              {sortOptions.filter(opt => opt.value !== "hyper-personalization").map((option) => (
-                <DropdownMenuItem
-                  key={option.value}
-                  onClick={() => setSortBy(option.value)}
-                  className={`gap-3 ${sortBy === option.value ? "bg-secondary" : ""}`}
-                >
-                  <option.icon className="w-4 h-4" />
-                  <div className="flex-1">
-                    <div className="font-medium">{option.label}</div>
-                    <div className="text-xs text-muted-foreground">{option.description}</div>
-                  </div>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-
-        {/* Product Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {sortedProducts.map((product, index) => (
-            <ProductCardEnhanced
-              key={product.id}
-              product={product}
-              personaId={personaId}
-              showReasoning={isHyperPersonalized}
-              showReasoningExpanded={showReasoningForAll}
-              rank={isHyperPersonalized ? index + 1 : undefined}
-            />
-          ))}
         </div>
       </main>
     </div>
