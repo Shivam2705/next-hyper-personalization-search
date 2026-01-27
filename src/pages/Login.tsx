@@ -175,7 +175,7 @@ const Login = () => {
               size="lg"
               onClick={handleLogin}
               disabled={!selectedPersona}
-              className="bg-primary hover:bg-primary/90 text-lg px-10 py-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-primary hover:bg-primary/90 text-lg px-10 py-6 text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Enter as {selectedPersona ? personas.find(p => p.id === selectedPersona)?.name : "..."} 
               <ArrowRight className="w-5 h-5 ml-2" />

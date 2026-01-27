@@ -53,9 +53,30 @@ const allProducts: Product[] = [
     category: "Workwear",
     popularity: 92,
     personalizationScores: {
-      emma: { score: 98, styleMatch: 94, fitConfidence: 91, lowReturnRisk: true, occasionRelevance: "Office", reasoning: "Perfect match for Emma's workwear preferences. Structured fit aligns with past purchases. Navy is her top colour choice." },
-      david: { score: 45, styleMatch: 40, fitConfidence: 50, lowReturnRisk: false, occasionRelevance: "Formal", reasoning: "Not aligned with David's casual family-focused shopping intent." },
-      aisha: { score: 62, styleMatch: 55, fitConfidence: 70, lowReturnRisk: true, occasionRelevance: "Work", reasoning: "Could work for office wear but not trend-forward enough for Aisha's preferences." }
+      emma: { 
+        score: 98, 
+        styleMatch: 94, 
+        fitConfidence: 91, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Office", 
+        reasoning: "📊 Based on 8 previous workwear purchases | Navy is Emma's #1 colour (worn 67% of recent outfits) | Structured midi silhouettes have 0% return rate in Emma's history | Price aligns with her £50-80 sweet spot | Similar items browsed for 4+ mins average dwell time."
+      },
+      david: { 
+        score: 45, 
+        styleMatch: 40, 
+        fitConfidence: 50, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Formal", 
+        reasoning: "⚠️ Category mismatch: David's basket is 85% casualwear/kidswear | No womenswear purchase history | Price point £40 above his typical basket average | No offer bundle available."
+      },
+      aisha: { 
+        score: 62, 
+        styleMatch: 55, 
+        fitConfidence: 70, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Work", 
+        reasoning: "📉 Style is understated vs. Aisha's trend-forward preference | Navy appears in only 12% of her wardrobe | Could work for office but not her primary shopping intent (occasionwear)."
+      }
     }
   },
   {
@@ -67,9 +88,30 @@ const allProducts: Product[] = [
     category: "Jackets",
     popularity: 88,
     personalizationScores: {
-      emma: { score: 95, styleMatch: 92, fitConfidence: 88, lowReturnRisk: true, occasionRelevance: "Smart Casual", reasoning: "Strong match with Emma's structured silhouette preference. Similar to past successful purchases." },
-      david: { score: 52, styleMatch: 48, fitConfidence: 55, lowReturnRisk: false, occasionRelevance: "Formal", reasoning: "Too formal for David's casual wear focus. Price point above typical range." },
-      aisha: { score: 70, styleMatch: 65, fitConfidence: 75, lowReturnRisk: true, occasionRelevance: "Evening", reasoning: "Classic piece that could complement Aisha's wardrobe but not a standout choice." }
+      emma: { 
+        score: 95, 
+        styleMatch: 92, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Smart Casual", 
+        reasoning: "🎯 High affinity: Emma purchased 3 similar blazers (12-month LTV: £420 in outerwear) | Size 12 wool blazers show 0% return rate | Complements 6 items in her recent orders | Smart-casual matches her Mon-Fri browsing pattern."
+      },
+      david: { 
+        score: 52, 
+        styleMatch: 48, 
+        fitConfidence: 55, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Formal", 
+        reasoning: "⚠️ Price £34 above David's category average | Formal style conflicts with 'casual & practical' segment | Low cross-sell potential with kidswear cart items."
+      },
+      aisha: { 
+        score: 70, 
+        styleMatch: 65, 
+        fitConfidence: 75, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Evening", 
+        reasoning: "📊 Classic silhouette ranks lower in Aisha's trend-affinity model | Could layer for evening events but not a statement piece she typically seeks."
+      }
     }
   },
   {
@@ -81,9 +123,30 @@ const allProducts: Product[] = [
     category: "Trousers",
     popularity: 85,
     personalizationScores: {
-      emma: { score: 91, styleMatch: 89, fitConfidence: 93, lowReturnRisk: true, occasionRelevance: "Versatile", reasoning: "Versatile piece matching Emma's style. High fit confidence based on size history." },
-      david: { score: 68, styleMatch: 60, fitConfidence: 72, lowReturnRisk: true, occasionRelevance: "Casual", reasoning: "Practical option that fits David's budget consciousness. Good for everyday wear." },
-      aisha: { score: 55, styleMatch: 50, fitConfidence: 60, lowReturnRisk: true, occasionRelevance: "Basic", reasoning: "Too basic for Aisha's trend-forward preferences." }
+      emma: { 
+        score: 91, 
+        styleMatch: 89, 
+        fitConfidence: 93, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Versatile", 
+        reasoning: "✅ Perfect size match: Emma's trouser size (10 Long) shows 97% fit satisfaction | Versatile piece pairs with 4 tops in her wishlist | Price within preferred range | Similar cut purchased twice with zero returns."
+      },
+      david: { 
+        score: 68, 
+        styleMatch: 60, 
+        fitConfidence: 72, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Casual", 
+        reasoning: "📊 Price-conscious fit: £45 matches David's value threshold | Could work for everyday but not his primary focus | No multi-buy available to boost ranking."
+      },
+      aisha: { 
+        score: 55, 
+        styleMatch: 50, 
+        fitConfidence: 60, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Basic", 
+        reasoning: "📉 Ranked lower: Basic silhouette scores 3.2/10 on Aisha's trend-forward index | No statement appeal | Low engagement predicted based on similar items."
+      }
     }
   },
   {
@@ -95,9 +158,30 @@ const allProducts: Product[] = [
     category: "Tops",
     popularity: 78,
     personalizationScores: {
-      emma: { score: 88, styleMatch: 91, fitConfidence: 86, lowReturnRisk: false, occasionRelevance: "Office", reasoning: "Elegant workwear option. Slight return risk due to fit sensitivity with silk fabrics." },
-      david: { score: 35, styleMatch: 30, fitConfidence: 40, lowReturnRisk: false, occasionRelevance: "Formal", reasoning: "Not aligned with David's shopping patterns or family focus." },
-      aisha: { score: 75, styleMatch: 72, fitConfidence: 78, lowReturnRisk: true, occasionRelevance: "Going Out", reasoning: "Versatile piece that could work for Aisha's evening occasions." }
+      emma: { 
+        score: 88, 
+        styleMatch: 91, 
+        fitConfidence: 86, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Office", 
+        reasoning: "🎯 Strong style match: Silk blouses appear in 5 of Emma's saved outfits | Office-appropriate as primary intent | ⚠️ Note: Silk items show 18% return rate in her history (fit sensitivity) — factored into score."
+      },
+      david: { 
+        score: 35, 
+        styleMatch: 30, 
+        fitConfidence: 40, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Formal", 
+        reasoning: "❌ Low relevance: No womenswear in David's 24-month purchase history | Doesn't fit family shopping context | No gift-intent signals detected."
+      },
+      aisha: { 
+        score: 75, 
+        styleMatch: 72, 
+        fitConfidence: 78, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Going Out", 
+        reasoning: "📊 Moderate match: Versatile for Aisha's evening occasions | Silk fabric aligns with premium preference | Ranked below bolder statement pieces."
+      }
     }
   },
   {
@@ -109,9 +193,30 @@ const allProducts: Product[] = [
     category: "Footwear",
     popularity: 95,
     personalizationScores: {
-      emma: { score: 85, styleMatch: 88, fitConfidence: 95, lowReturnRisk: true, occasionRelevance: "All-day", reasoning: "Classic footwear matching Emma's style. Excellent fit confidence from past footwear purchases." },
-      david: { score: 72, styleMatch: 65, fitConfidence: 80, lowReturnRisk: true, occasionRelevance: "Everyday", reasoning: "Practical footwear option. Good value for quality." },
-      aisha: { score: 82, styleMatch: 78, fitConfidence: 85, lowReturnRisk: true, occasionRelevance: "Versatile", reasoning: "Trendy enough to appeal to Aisha while being practical." }
+      emma: { 
+        score: 85, 
+        styleMatch: 88, 
+        fitConfidence: 95, 
+        lowReturnRisk: true, 
+        occasionRelevance: "All-day", 
+        reasoning: "✅ High fit confidence: Emma's shoe size (6) has 98% satisfaction in ankle boots | Classic style complements workwear wardrobe | Previously viewed similar styles 3x without purchase — price may be factor."
+      },
+      david: { 
+        score: 72, 
+        styleMatch: 65, 
+        fitConfidence: 80, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Everyday", 
+        reasoning: "📊 Practical choice: Durable footwear aligns with David's 'practical purchases' segment | £79 within acceptable range for quality items | Potential gift purchase detected."
+      },
+      aisha: { 
+        score: 82, 
+        styleMatch: 78, 
+        fitConfidence: 85, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Versatile", 
+        reasoning: "🎯 Good versatility: Boots work across Aisha's occasion wardrobe | On-trend block heel | Ranked below statement footwear preferences."
+      }
     }
   },
   {
@@ -123,9 +228,30 @@ const allProducts: Product[] = [
     category: "Knitwear",
     popularity: 82,
     personalizationScores: {
-      emma: { score: 83, styleMatch: 87, fitConfidence: 90, lowReturnRisk: true, occasionRelevance: "Layering", reasoning: "Quality layering piece for Emma's office wardrobe. Neutral colour options available." },
-      david: { score: 58, styleMatch: 55, fitConfidence: 65, lowReturnRisk: true, occasionRelevance: "Casual", reasoning: "Price point slightly high for David's value focus, but quality piece." },
-      aisha: { score: 60, styleMatch: 55, fitConfidence: 70, lowReturnRisk: true, occasionRelevance: "Basic", reasoning: "Too understated for Aisha's bold style preferences." }
+      emma: { 
+        score: 83, 
+        styleMatch: 87, 
+        fitConfidence: 90, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Layering", 
+        reasoning: "📊 Seasonal relevance: Knitwear demand +40% in Emma's region (Reading) | Neutral colours in stock match her palette | Quality layering for office temperature control."
+      },
+      david: { 
+        score: 58, 
+        styleMatch: 55, 
+        fitConfidence: 65, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Casual", 
+        reasoning: "⚠️ Price sensitivity flag: £75 is 45% above David's knitwear average (£52) | Quality piece but may not convert without discount."
+      },
+      aisha: { 
+        score: 60, 
+        styleMatch: 55, 
+        fitConfidence: 70, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Basic", 
+        reasoning: "📉 Low trend score: Classic knitwear doesn't match Aisha's 'new arrivals first' behaviour | Understated for her statement-seeking profile."
+      }
     }
   },
   {
@@ -137,9 +263,30 @@ const allProducts: Product[] = [
     category: "Basics",
     popularity: 96,
     personalizationScores: {
-      emma: { score: 55, styleMatch: 50, fitConfidence: 80, lowReturnRisk: true, occasionRelevance: "Casual", reasoning: "Basic item for casual wear. Not aligned with Emma's workwear focus." },
-      david: { score: 95, styleMatch: 88, fitConfidence: 92, lowReturnRisk: true, occasionRelevance: "Everyday", reasoning: "Perfect for David! Multi-buy value, practical family basics. High engagement with similar offers." },
-      aisha: { score: 40, styleMatch: 35, fitConfidence: 75, lowReturnRisk: true, occasionRelevance: "Basics", reasoning: "Too basic for Aisha's fashion-forward preferences." }
+      emma: { 
+        score: 55, 
+        styleMatch: 50, 
+        fitConfidence: 80, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Casual", 
+        reasoning: "📉 Lower priority: Basics rank low in Emma's workwear-focused journey | May purchase as add-on but not primary driver | Weekend casual not her peak intent."
+      },
+      david: { 
+        score: 95, 
+        styleMatch: 88, 
+        fitConfidence: 92, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Everyday", 
+        reasoning: "🏆 TOP MATCH: Multi-buy format matches David's value-maximizing behaviour | £8.33/item hits sweet spot | 4 similar multi-packs purchased in 12 months | High offer responsiveness (opened 89% of multi-buy emails) | Family staple category."
+      },
+      aisha: { 
+        score: 40, 
+        styleMatch: 35, 
+        fitConfidence: 75, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Basics", 
+        reasoning: "❌ Mismatch: Basics never appear in Aisha's browsing sessions | Trend index: 1.2/10 | Deprioritized for fashion-forward profile."
+      }
     }
   },
   {
@@ -151,9 +298,30 @@ const allProducts: Product[] = [
     category: "Kidswear",
     popularity: 89,
     personalizationScores: {
-      emma: { score: 20, styleMatch: 15, fitConfidence: 50, lowReturnRisk: true, occasionRelevance: "N/A", reasoning: "Not relevant to Emma's shopping profile - no kidswear history." },
-      david: { score: 92, styleMatch: 85, fitConfidence: 88, lowReturnRisk: true, occasionRelevance: "Kids", reasoning: "Excellent match for David's family shopping! Durable, practical, great value." },
-      aisha: { score: 15, styleMatch: 10, fitConfidence: 40, lowReturnRisk: true, occasionRelevance: "N/A", reasoning: "Not relevant to Aisha's profile." }
+      emma: { 
+        score: 20, 
+        styleMatch: 15, 
+        fitConfidence: 50, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ No relevance: Zero kidswear in Emma's 36-month history | No children detected in household signals | Category excluded from her personalized feed."
+      },
+      david: { 
+        score: 92, 
+        styleMatch: 85, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Kids", 
+        reasoning: "🏆 HIGH PRIORITY: David's household includes 2 children (ages 4, 7) | Kidswear = 45% of annual spend | Denim durability matches his 'practical & durable' filter | Price within kids budget threshold | Recently browsed similar styles."
+      },
+      aisha: { 
+        score: 15, 
+        styleMatch: 10, 
+        fitConfidence: 40, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: No children in Aisha's profile | Zero kidswear engagement signals."
+      }
     }
   },
   {
@@ -165,9 +333,30 @@ const allProducts: Product[] = [
     category: "Eveningwear",
     popularity: 75,
     personalizationScores: {
-      emma: { score: 45, styleMatch: 40, fitConfidence: 55, lowReturnRisk: false, occasionRelevance: "Special", reasoning: "Too bold for Emma's understated style. Occasion mismatch with daily needs." },
-      david: { score: 25, styleMatch: 20, fitConfidence: 30, lowReturnRisk: false, occasionRelevance: "N/A", reasoning: "Not aligned with David's casual family-focused shopping." },
-      aisha: { score: 97, styleMatch: 95, fitConfidence: 88, lowReturnRisk: true, occasionRelevance: "Evening", reasoning: "Perfect for Aisha! Trend-led, statement piece for occasions. Matches her bold style affinity." }
+      emma: { 
+        score: 45, 
+        styleMatch: 40, 
+        fitConfidence: 55, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Special", 
+        reasoning: "📉 Style mismatch: Sequins score 2.1/10 on Emma's understated style index | No evening events detected in calendar signals | Workwear focus doesn't align."
+      },
+      david: { 
+        score: 25, 
+        styleMatch: 20, 
+        fitConfidence: 30, 
+        lowReturnRisk: false, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: Evening womenswear outside David's shopping context | No gift-intent signals active."
+      },
+      aisha: { 
+        score: 97, 
+        styleMatch: 95, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Evening", 
+        reasoning: "🏆 PERFECT MATCH: Sequins = Aisha's #1 fabric for occasions (worn at 4 recent events) | New-in collection (24hrs) matches her 'first to trend' behaviour | Statement silhouette scores 9.4/10 | 3 upcoming events in social calendar | Size 10 evening dresses: 0% returns."
+      }
     }
   },
   {
@@ -179,9 +368,30 @@ const allProducts: Product[] = [
     category: "Skirts",
     popularity: 70,
     personalizationScores: {
-      emma: { score: 42, styleMatch: 38, fitConfidence: 50, lowReturnRisk: false, occasionRelevance: "Casual", reasoning: "Bold print doesn't match Emma's neutral colour preference." },
-      david: { score: 30, styleMatch: 25, fitConfidence: 35, lowReturnRisk: false, occasionRelevance: "N/A", reasoning: "Not relevant to David's shopping patterns." },
-      aisha: { score: 94, styleMatch: 92, fitConfidence: 85, lowReturnRisk: true, occasionRelevance: "Statement", reasoning: "Excellent match! Bold print aligns with Aisha's trend-forward style." }
+      emma: { 
+        score: 42, 
+        styleMatch: 38, 
+        fitConfidence: 50, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Casual", 
+        reasoning: "📉 Pattern conflict: Bold prints appear in 0% of Emma's purchases | Neutral palette preference (92% of wardrobe) | Return risk elevated for unfamiliar styles."
+      },
+      david: { 
+        score: 30, 
+        styleMatch: 25, 
+        fitConfidence: 35, 
+        lowReturnRisk: false, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Low relevance: Outside David's casualwear/kidswear focus | No womenswear patterns detected."
+      },
+      aisha: { 
+        score: 94, 
+        styleMatch: 92, 
+        fitConfidence: 85, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Statement", 
+        reasoning: "🎯 STRONG MATCH: Bold prints = 78% of Aisha's recent purchases | Maxi length trending +35% in her style cohort | Instagram-saved similar styles 6x | Perfect for summer events calendar."
+      }
     }
   },
   {
@@ -193,9 +403,30 @@ const allProducts: Product[] = [
     category: "Sleepwear",
     popularity: 80,
     personalizationScores: {
-      emma: { score: 35, styleMatch: 30, fitConfidence: 60, lowReturnRisk: true, occasionRelevance: "Home", reasoning: "Not aligned with Emma's professional wardrobe focus." },
-      david: { score: 88, styleMatch: 82, fitConfidence: 85, lowReturnRisk: true, occasionRelevance: "Family", reasoning: "Great family purchase! Matches David's multi-buy and family shopping patterns." },
-      aisha: { score: 25, styleMatch: 20, fitConfidence: 55, lowReturnRisk: true, occasionRelevance: "Home", reasoning: "Not aligned with Aisha's fashion-forward preferences." }
+      emma: { 
+        score: 35, 
+        styleMatch: 30, 
+        fitConfidence: 60, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Home", 
+        reasoning: "📉 Low intent match: Sleepwear is 2% of Emma's browse time | No family matching signals | Professional wardrobe remains priority."
+      },
+      david: { 
+        score: 88, 
+        styleMatch: 82, 
+        fitConfidence: 85, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Family", 
+        reasoning: "🎯 FAMILY FAVOURITE: Multi-size matching sets = David's top seasonal category | Purchased similar 2x in past year | 'Family activities' segment trigger | Price optimized for household budget | High engagement with family content."
+      },
+      aisha: { 
+        score: 25, 
+        styleMatch: 20, 
+        fitConfidence: 55, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Home", 
+        reasoning: "❌ Category excluded: No family/home focus in Aisha's profile | Trend relevance: minimal."
+      }
     }
   },
   {
@@ -207,9 +438,30 @@ const allProducts: Product[] = [
     category: "Accessories",
     popularity: 73,
     personalizationScores: {
-      emma: { score: 50, styleMatch: 45, fitConfidence: 100, lowReturnRisk: true, occasionRelevance: "Accent", reasoning: "Could add interest to Emma's outfits but bolder than typical preference." },
-      david: { score: 40, styleMatch: 35, fitConfidence: 100, lowReturnRisk: true, occasionRelevance: "Gift", reasoning: "Potential gift purchase but not David's primary focus." },
-      aisha: { score: 90, styleMatch: 92, fitConfidence: 100, lowReturnRisk: true, occasionRelevance: "Statement", reasoning: "Perfect accessory for Aisha's bold evening looks. Great add-on recommendation." }
+      emma: { 
+        score: 50, 
+        styleMatch: 45, 
+        fitConfidence: 100, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Accent", 
+        reasoning: "📊 Moderate add-on potential: Could complement workwear outfits | 'Statement' style bolder than Emma's typical accessory choices | Low price enables impulse add."
+      },
+      david: { 
+        score: 40, 
+        styleMatch: 35, 
+        fitConfidence: 100, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Gift", 
+        reasoning: "📊 Gift potential: Anniversary date approaching (14 days) | Accessories = common gift category | Low price point enables trial."
+      },
+      aisha: { 
+        score: 90, 
+        styleMatch: 92, 
+        fitConfidence: 100, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Statement", 
+        reasoning: "🎯 PERFECT ADD-ON: Statement accessories purchased with 73% of Aisha's evening orders | Bold design matches trend profile | High-margin upsell opportunity | Complements sequin dress recommendation."
+      }
     }
   }
 ];
@@ -321,26 +573,29 @@ const Store = () => {
 
         {/* Personalization Banner */}
         {isHyperPersonalized && (
-          <div className="glass-card p-4 mb-6 flex flex-col md:flex-row items-start md:items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center flex-shrink-0">
-              <Brain className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div className="flex-1">
-              <div className="text-sm font-medium text-foreground mb-1">
-                🎯 Agentic AI Ranking Active
+          <div className="glass-card p-4 mb-6 flex flex-col md:flex-row items-start md:items-center gap-4 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-transparent" />
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                <Brain className="w-5 h-5 text-primary-foreground" />
               </div>
-              <div className="text-xs text-muted-foreground">
-                Products ordered by hyper-personalization score · Showing {persona.intent} · {persona.style} styles prioritized · {persona.priceRange} price range
+              <div className="flex-1">
+                <div className="text-sm font-medium text-foreground mb-1">
+                  Agentic AI Ranking Active
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  Products ranked by personalization score · {persona.style} styles · {persona.priceRange}
+                </div>
               </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setShowReasoningForAll(!showReasoningForAll)}
+                className="border-primary/30 text-primary hover:bg-primary/10"
+              >
+                {showReasoningForAll ? "Hide" : "Expand"} All Reasoning
+              </Button>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setShowReasoningForAll(!showReasoningForAll)}
-              className="border-primary/30 text-primary hover:bg-primary/10"
-            >
-              {showReasoningForAll ? "Hide" : "Show"} All Reasoning
-            </Button>
           </div>
         )}
 

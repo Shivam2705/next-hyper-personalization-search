@@ -60,11 +60,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        next: {
-          orange: "hsl(18, 91%, 54%)",
-          "orange-light": "hsl(28, 100%, 60%)",
-          charcoal: "hsl(0, 0%, 8%)",
-          "charcoal-dark": "hsl(0, 0%, 4%)",
+        brand: {
+          teal: "hsl(174, 72%, 56%)",
+          purple: "hsl(280, 85%, 65%)",
+          pink: "hsl(330, 85%, 60%)",
+          navy: "hsl(220, 50%, 3%)",
+          "navy-light": "hsl(220, 45%, 8%)",
         },
       },
       borderRadius: {

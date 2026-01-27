@@ -91,7 +91,9 @@ const Landing = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 md:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-primary/5 to-transparent" />
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-40 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
@@ -106,7 +108,7 @@ const Landing = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Our Agentic AI transforms static product catalogs into dynamically personalized experiences. 
+            Agentic AI transforms static catalogs into dynamically personalized experiences. 
             Products, imagery, and narratives adapt in real-time based on individual shopper intelligence.
           </p>
 
@@ -114,9 +116,9 @@ const Landing = () => {
             <Button 
               size="lg" 
               onClick={() => navigate("/login")}
-              className="bg-primary hover:bg-primary/90 text-lg px-8 py-6"
+              className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 text-primary-foreground"
             >
-              Enter Personalized Store
+              Experience Demo
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button 
@@ -125,7 +127,7 @@ const Landing = () => {
               onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })}
               className="text-lg px-8 py-6 border-border hover:bg-secondary"
             >
-              Learn How It Works
+              Learn More
             </Button>
           </div>
         </div>
@@ -291,23 +293,26 @@ const Landing = () => {
       {/* CTA Section */}
       <section className="section-padding relative">
         <div className="container mx-auto">
-          <div className="glass-card p-12 text-center max-w-4xl mx-auto glow-effect">
-            <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Experience Personalization in Action
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              See how the same NEXT catalog appears differently for different shoppers. 
-              Choose a persona and explore the agentic ranking in action.
-            </p>
-            <Button 
-              size="lg" 
-              onClick={() => navigate("/login")}
-              className="bg-primary hover:bg-primary/90 text-lg px-10 py-6"
-            >
-              Start the Demo
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+          <div className="glass-card p-12 text-center max-w-4xl mx-auto relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
+            <div className="relative z-10">
+              <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                See Personalization in Action
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Choose a shopper persona and watch the same NEXT catalog transform 
+                based on their unique preferences and behaviour.
+              </p>
+              <Button 
+                size="lg" 
+                onClick={() => navigate("/login")}
+                className="bg-primary hover:bg-primary/90 text-lg px-10 py-6 text-primary-foreground"
+              >
+                Start Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
