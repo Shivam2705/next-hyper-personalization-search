@@ -15,11 +15,11 @@ interface PastPurchase {
 // Past purchases - DIFFERENT from current recommendations but establish patterns
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
-    // Emma: Female professional workwear - structured, clean, elegant (2025 dates)
+    // Emma: Female corporate professional - structured, elegant, polished (2025 dates)
     {
       id: "ep1",
       name: "Black Tailored Blazer",
-      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=250&fit=crop",
       price: "£89",
       date: "Jan 2026",
       category: "Workwear",
@@ -27,8 +27,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep2",
-      name: "Cream Silk Camisole",
-      image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=200&h=250&fit=crop",
+      name: "Ivory Silk Blouse",
+      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
       price: "£52",
       date: "Dec 2025",
       category: "Tops",
@@ -36,8 +36,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep3",
-      name: "Black Pencil Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
+      name: "Black Midi Pencil Skirt",
+      image: "https://images.unsplash.com/photo-1565945887714-d72c12cc51db?w=200&h=250&fit=crop",
       price: "£48",
       date: "Nov 2025",
       category: "Workwear",
@@ -45,8 +45,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep4",
-      name: "Beige Cashmere Cardigan",
-      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
+      name: "Camel Cashmere Cardigan",
+      image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=250&fit=crop",
       price: "£75",
       date: "Sep 2025",
       category: "Knitwear",
@@ -54,7 +54,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep5",
-      name: "Nude Court Heels",
+      name: "Nude Patent Heels",
       image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£68",
       date: "Aug 2025",
