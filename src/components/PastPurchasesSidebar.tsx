@@ -15,11 +15,11 @@ interface PastPurchase {
 // Past purchases - DIFFERENT from current recommendations but establish patterns
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
-    // Emma: Female corporate professional - structured, elegant, polished (2025 dates)
+    // Emma: Female corporate professional - structured, elegant, polished
     {
       id: "ep1",
       name: "Black Tailored Blazer",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
       price: "£89",
       date: "Jan 2026",
       category: "Workwear",
@@ -28,7 +28,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep2",
       name: "Ivory Silk Blouse",
-      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=200&h=250&fit=crop",
       price: "£52",
       date: "Dec 2025",
       category: "Tops",
@@ -36,8 +36,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep3",
-      name: "Black Midi Pencil Skirt",
-      image: "https://images.unsplash.com/photo-1565945887714-d72c12cc51db?w=200&h=250&fit=crop",
+      name: "Black Pencil Skirt",
+      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
       price: "£48",
       date: "Nov 2025",
       category: "Workwear",
@@ -46,7 +46,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep4",
       name: "Camel Cashmere Cardigan",
-      image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
       price: "£75",
       date: "Sep 2025",
       category: "Knitwear",
@@ -54,7 +54,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ep5",
-      name: "Nude Patent Heels",
+      name: "Nude Court Heels",
       image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£68",
       date: "Aug 2025",
@@ -63,11 +63,11 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     }
   ],
   david: [
-    // David: Family value shopper - kidswear + menswear basics (2025 dates)
+    // David: Family value shopper - kidswear + menswear basics
     {
       id: "dp1",
       name: "Boys' Grey School Jumper",
-      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
       price: "£14",
       date: "Jan 2026",
       category: "Kidswear",
@@ -85,7 +85,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp3",
       name: "Boys' Navy Raincoat",
-      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1445796886651-d31a2c15f3ce?w=200&h=250&fit=crop",
       price: "£32",
       date: "Oct 2025",
       category: "Kidswear",
@@ -93,7 +93,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "dp4",
-      name: "Men's White T-Shirt (2pk)",
+      name: "Men's White T-Shirt (3pk)",
       image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=250&fit=crop",
       price: "£16",
       date: "Sep 2025",
@@ -111,11 +111,11 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     }
   ],
   aisha: [
-    // Aisha: Female trend-forward, bold eveningwear & statement pieces (2025 dates)
+    // Aisha: Female trend-forward, bold eveningwear & statement pieces
     {
       id: "ap1",
       name: "Cobalt Blue Wrap Dress",
-      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop",
       price: "£72",
       date: "Jan 2026",
       category: "Eveningwear",
@@ -132,8 +132,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ap3",
-      name: "Hot Pink Cropped Blazer",
-      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
+      name: "Orange Cropped Blazer",
+      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
       price: "£68",
       date: "Nov 2025",
       category: "Statement Pieces",
@@ -142,7 +142,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap4",
       name: "Black Strappy Heels",
-      image: "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£85",
       date: "Sep 2025",
       category: "Footwear",
@@ -150,8 +150,8 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     },
     {
       id: "ap5",
-      name: "Floral Satin Midi Skirt",
-      image: "https://images.unsplash.com/photo-1577900232427-18219b9166a0?w=200&h=250&fit=crop",
+      name: "Tropical Print Midi Skirt",
+      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
       price: "£48",
       date: "Aug 2025",
       category: "Statement Pieces",
