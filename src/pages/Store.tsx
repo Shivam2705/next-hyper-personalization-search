@@ -44,279 +44,176 @@ export interface Product {
 }
 
 const allProducts: Product[] = [
+  // === EMMA'S TOP PICKS: Professional Workwear ===
   {
     id: 1,
-    name: "Tailored Midi Dress in Navy",
-    price: 65,
-    priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
+    name: "Navy Midi Shirtdress",
+    price: 85,
+    priceDisplay: "£85",
+    image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=600&fit=crop",
     category: "Workwear",
-    popularity: 92,
+    popularity: 88,
     personalizationScores: {
       emma: { 
         score: 98, 
-        styleMatch: 94, 
-        fitConfidence: 91, 
+        styleMatch: 96, 
+        fitConfidence: 94, 
         lowReturnRisk: true, 
         occasionRelevance: "Office", 
-        reasoning: "📊 Based on 8 previous workwear purchases | Navy is Emma's #1 colour (worn 67% of recent outfits) | Structured midi silhouettes have 0% return rate in Emma's history | Price aligns with her £50-80 sweet spot | Similar items browsed for 4+ mins average dwell time."
+        reasoning: "🏆 TOP MATCH: Navy dresses = Emma's #1 category (5 purchased in 18 months) | Size 12 structured fits show 0% return rate | Price £85 within her £70-100 workwear budget | Complements 8 items in current wardrobe | Professional style matches Mon-Fri browsing peak."
       },
       david: { 
-        score: 45, 
-        styleMatch: 40, 
-        fitConfidence: 50, 
+        score: 28, 
+        styleMatch: 22, 
+        fitConfidence: 35, 
         lowReturnRisk: false, 
-        occasionRelevance: "Formal", 
-        reasoning: "⚠️ Category mismatch: David's basket is 85% casualwear/kidswear | No womenswear purchase history | Price point £40 above his typical basket average | No offer bundle available."
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category mismatch: Women's tailoring outside David's family-focused shopping | No womenswear purchase history | Price 60% above his typical item spend."
       },
       aisha: { 
-        score: 62, 
-        styleMatch: 55, 
-        fitConfidence: 70, 
+        score: 52, 
+        styleMatch: 48, 
+        fitConfidence: 65, 
         lowReturnRisk: true, 
         occasionRelevance: "Work", 
-        reasoning: "📉 Style is understated vs. Aisha's trend-forward preference | Navy appears in only 12% of her wardrobe | Could work for office but not her primary shopping intent (occasionwear)."
+        reasoning: "📉 Style gap: Classic navy too understated for Aisha's trend-forward preference | Structured silhouette ranks 4.2/10 on her statement index | Office wear only 8% of her purchases."
       }
     }
   },
   {
     id: 2,
-    name: "Structured Wool Blazer",
-    price: 89,
-    priceDisplay: "£89",
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
-    category: "Jackets",
-    popularity: 88,
+    name: "White Silk Office Blouse",
+    price: 65,
+    priceDisplay: "£65",
+    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&h=600&fit=crop",
+    category: "Tops",
+    popularity: 82,
     personalizationScores: {
       emma: { 
         score: 95, 
-        styleMatch: 92, 
-        fitConfidence: 88, 
+        styleMatch: 93, 
+        fitConfidence: 91, 
         lowReturnRisk: true, 
-        occasionRelevance: "Smart Casual", 
-        reasoning: "🎯 High affinity: Emma purchased 3 similar blazers (12-month LTV: £420 in outerwear) | Size 12 wool blazers show 0% return rate | Complements 6 items in her recent orders | Smart-casual matches her Mon-Fri browsing pattern."
+        occasionRelevance: "Office", 
+        reasoning: "🎯 STRONG MATCH: White blouses appear in 6 of Emma's saved outfits | Silk fabric in her premium preference tier | Size 12 blouses: 96% fit satisfaction | Pairs perfectly with her navy trouser collection | Meeting-appropriate per her calendar integration."
       },
       david: { 
-        score: 52, 
-        styleMatch: 48, 
-        fitConfidence: 55, 
+        score: 22, 
+        styleMatch: 18, 
+        fitConfidence: 30, 
         lowReturnRisk: false, 
-        occasionRelevance: "Formal", 
-        reasoning: "⚠️ Price £34 above David's category average | Formal style conflicts with 'casual & practical' segment | Low cross-sell potential with kidswear cart items."
+        occasionRelevance: "N/A", 
+        reasoning: "❌ No relevance: Women's workwear outside David's shopping scope | Zero formal womenswear in 36-month history."
       },
       aisha: { 
-        score: 70, 
-        styleMatch: 65, 
-        fitConfidence: 75, 
+        score: 58, 
+        styleMatch: 52, 
+        fitConfidence: 70, 
         lowReturnRisk: true, 
-        occasionRelevance: "Evening", 
-        reasoning: "📊 Classic silhouette ranks lower in Aisha's trend-affinity model | Could layer for evening events but not a statement piece she typically seeks."
+        occasionRelevance: "Basic", 
+        reasoning: "📊 Moderate fit: Classic white blouse too minimal for Aisha's bold aesthetic | Could layer but not a statement piece | Ranks low on her trend-forward index (3.8/10)."
       }
     }
   },
   {
     id: 3,
-    name: "Slim Fit Trousers",
-    price: 45,
-    priceDisplay: "£45",
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=600&fit=crop",
-    category: "Trousers",
+    name: "Charcoal Wool Trousers",
+    price: 55,
+    priceDisplay: "£55",
+    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop",
+    category: "Workwear",
     popularity: 85,
     personalizationScores: {
       emma: { 
-        score: 91, 
-        styleMatch: 89, 
-        fitConfidence: 93, 
+        score: 94, 
+        styleMatch: 92, 
+        fitConfidence: 96, 
         lowReturnRisk: true, 
         occasionRelevance: "Versatile", 
-        reasoning: "✅ Perfect size match: Emma's trouser size (10 Long) shows 97% fit satisfaction | Versatile piece pairs with 4 tops in her wishlist | Price within preferred range | Similar cut purchased twice with zero returns."
+        reasoning: "✅ PERFECT FIT: Emma's trouser size (10 Long) shows 98% satisfaction in slim cuts | Charcoal = her #2 colour (worn 24% of workdays) | Wool blend matches her quality-first preference | Pairs with 5 blazers in wardrobe | Zero returns on similar silhouettes."
       },
       david: { 
-        score: 68, 
-        styleMatch: 60, 
-        fitConfidence: 72, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Casual", 
-        reasoning: "📊 Price-conscious fit: £45 matches David's value threshold | Could work for everyday but not his primary focus | No multi-buy available to boost ranking."
+        score: 25, 
+        styleMatch: 20, 
+        fitConfidence: 35, 
+        lowReturnRisk: false, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Gender mismatch: Women's tailored trousers outside David's purchase context | Price £20 above his casualwear average."
       },
       aisha: { 
-        score: 55, 
-        styleMatch: 50, 
+        score: 45, 
+        styleMatch: 40, 
         fitConfidence: 60, 
         lowReturnRisk: true, 
         occasionRelevance: "Basic", 
-        reasoning: "📉 Ranked lower: Basic silhouette scores 3.2/10 on Aisha's trend-forward index | No statement appeal | Low engagement predicted based on similar items."
+        reasoning: "📉 Low priority: Classic tailoring scores 2.8/10 on Aisha's trend index | Charcoal not in her vibrant colour palette | Basic workwear not her shopping intent."
       }
     }
   },
   {
     id: 4,
-    name: "Silk Blend Blouse",
-    price: 55,
-    priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=600&fit=crop",
-    category: "Tops",
-    popularity: 78,
+    name: "Camel Wool Coat",
+    price: 120,
+    priceDisplay: "£120",
+    image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=600&fit=crop",
+    category: "Outerwear",
+    popularity: 90,
     personalizationScores: {
       emma: { 
-        score: 88, 
-        styleMatch: 91, 
-        fitConfidence: 86, 
-        lowReturnRisk: false, 
-        occasionRelevance: "Office", 
-        reasoning: "🎯 Strong style match: Silk blouses appear in 5 of Emma's saved outfits | Office-appropriate as primary intent | ⚠️ Note: Silk items show 18% return rate in her history (fit sensitivity) — factored into score."
+        score: 92, 
+        styleMatch: 90, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Commute", 
+        reasoning: "🎯 SEASONAL PRIORITY: Camel coats trending +45% in Reading area this month | Neutral tone matches Emma's palette (89% neutral wardrobe) | Structured silhouette aligns with professional aesthetic | Premium outerwear category she engages with quarterly."
       },
       david: { 
-        score: 35, 
-        styleMatch: 30, 
+        score: 32, 
+        styleMatch: 28, 
         fitConfidence: 40, 
         lowReturnRisk: false, 
-        occasionRelevance: "Formal", 
-        reasoning: "❌ Low relevance: No womenswear in David's 24-month purchase history | Doesn't fit family shopping context | No gift-intent signals detected."
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Outside scope: Women's premium outerwear | £120 significantly above David's £55 average | No womenswear purchase signals."
       },
       aisha: { 
-        score: 75, 
-        styleMatch: 72, 
-        fitConfidence: 78, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Going Out", 
-        reasoning: "📊 Moderate match: Versatile for Aisha's evening occasions | Silk fabric aligns with premium preference | Ranked below bolder statement pieces."
-      }
-    }
-  },
-  {
-    id: 5,
-    name: "Leather Ankle Boots",
-    price: 79,
-    priceDisplay: "£79",
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop",
-    category: "Footwear",
-    popularity: 95,
-    personalizationScores: {
-      emma: { 
-        score: 85, 
-        styleMatch: 88, 
-        fitConfidence: 95, 
-        lowReturnRisk: true, 
-        occasionRelevance: "All-day", 
-        reasoning: "✅ High fit confidence: Emma's shoe size (6) has 98% satisfaction in ankle boots | Classic style complements workwear wardrobe | Previously viewed similar styles 3x without purchase — price may be factor."
-      },
-      david: { 
-        score: 72, 
-        styleMatch: 65, 
-        fitConfidence: 80, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Everyday", 
-        reasoning: "📊 Practical choice: Durable footwear aligns with David's 'practical purchases' segment | £79 within acceptable range for quality items | Potential gift purchase detected."
-      },
-      aisha: { 
-        score: 82, 
-        styleMatch: 78, 
-        fitConfidence: 85, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Versatile", 
-        reasoning: "🎯 Good versatility: Boots work across Aisha's occasion wardrobe | On-trend block heel | Ranked below statement footwear preferences."
-      }
-    }
-  },
-  {
-    id: 6,
-    name: "Cashmere Blend Knit",
-    price: 75,
-    priceDisplay: "£75",
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=600&fit=crop",
-    category: "Knitwear",
-    popularity: 82,
-    personalizationScores: {
-      emma: { 
-        score: 83, 
-        styleMatch: 87, 
-        fitConfidence: 90, 
+        score: 65, 
+        styleMatch: 60, 
+        fitConfidence: 72, 
         lowReturnRisk: true, 
         occasionRelevance: "Layering", 
-        reasoning: "📊 Seasonal relevance: Knitwear demand +40% in Emma's region (Reading) | Neutral colours in stock match her palette | Quality layering for office temperature control."
-      },
-      david: { 
-        score: 58, 
-        styleMatch: 55, 
-        fitConfidence: 65, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Casual", 
-        reasoning: "⚠️ Price sensitivity flag: £75 is 45% above David's knitwear average (£52) | Quality piece but may not convert without discount."
-      },
-      aisha: { 
-        score: 60, 
-        styleMatch: 55, 
-        fitConfidence: 70, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Basic", 
-        reasoning: "📉 Low trend score: Classic knitwear doesn't match Aisha's 'new arrivals first' behaviour | Understated for her statement-seeking profile."
+        reasoning: "📊 Moderate: Classic camel is timeless but lacks statement appeal for Aisha | Neutral tone appears in only 15% of her wardrobe | Practical but not trend-driven."
       }
     }
   },
+  // === DAVID'S TOP PICKS: Family Value ===
   {
-    id: 7,
-    name: "Multi-Pack Cotton Tees (3)",
-    price: 25,
-    priceDisplay: "£25",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=600&fit=crop",
-    category: "Basics",
-    popularity: 96,
-    personalizationScores: {
-      emma: { 
-        score: 55, 
-        styleMatch: 50, 
-        fitConfidence: 80, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Casual", 
-        reasoning: "📉 Lower priority: Basics rank low in Emma's workwear-focused journey | May purchase as add-on but not primary driver | Weekend casual not her peak intent."
-      },
-      david: { 
-        score: 95, 
-        styleMatch: 88, 
-        fitConfidence: 92, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Everyday", 
-        reasoning: "🏆 TOP MATCH: Multi-buy format matches David's value-maximizing behaviour | £8.33/item hits sweet spot | 4 similar multi-packs purchased in 12 months | High offer responsiveness (opened 89% of multi-buy emails) | Family staple category."
-      },
-      aisha: { 
-        score: 40, 
-        styleMatch: 35, 
-        fitConfidence: 75, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Basics", 
-        reasoning: "❌ Mismatch: Basics never appear in Aisha's browsing sessions | Trend index: 1.2/10 | Deprioritized for fashion-forward profile."
-      }
-    }
-  },
-  {
-    id: 8,
-    name: "Kids Denim Dungarees",
-    price: 22,
-    priceDisplay: "£22",
+    id: 5,
+    name: "Boys' Navy Polo Shirt",
+    price: 12,
+    priceDisplay: "£12",
     image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop",
     category: "Kidswear",
-    popularity: 89,
+    popularity: 94,
     personalizationScores: {
       emma: { 
-        score: 20, 
-        styleMatch: 15, 
+        score: 15, 
+        styleMatch: 10, 
         fitConfidence: 50, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ No relevance: Zero kidswear in Emma's 36-month history | No children detected in household signals | Category excluded from her personalized feed."
+        reasoning: "❌ No relevance: Zero kidswear in Emma's 36-month history | No children detected in household signals | Category excluded from personalized feed."
       },
       david: { 
-        score: 92, 
-        styleMatch: 85, 
-        fitConfidence: 88, 
+        score: 97, 
+        styleMatch: 92, 
+        fitConfidence: 94, 
         lowReturnRisk: true, 
-        occasionRelevance: "Kids", 
-        reasoning: "🏆 HIGH PRIORITY: David's household includes 2 children (ages 4, 7) | Kidswear = 45% of annual spend | Denim durability matches his 'practical & durable' filter | Price within kids budget threshold | Recently browsed similar styles."
+        occasionRelevance: "School", 
+        reasoning: "🏆 TOP MATCH: David's sons (ages 7, 9) = primary shopping focus | School-appropriate polo purchased 6x annually | Navy = required uniform colour | Size age 7-8 shows 100% fit accuracy | £12 within his £10-15 kidswear sweet spot | Multi-buy offer available (3 for £30)."
       },
       aisha: { 
-        score: 15, 
-        styleMatch: 10, 
+        score: 10, 
+        styleMatch: 8, 
         fitConfidence: 40, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
@@ -325,142 +222,319 @@ const allProducts: Product[] = [
     }
   },
   {
-    id: 9,
-    name: "Sequin Evening Dress",
-    price: 95,
-    priceDisplay: "£95",
-    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=600&fit=crop",
-    category: "Eveningwear",
-    popularity: 75,
+    id: 6,
+    name: "Men's Cotton Multi-Pack Tees (5)",
+    price: 25,
+    priceDisplay: "£25",
+    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=600&fit=crop",
+    category: "Menswear Basics",
+    popularity: 96,
     personalizationScores: {
       emma: { 
-        score: 45, 
-        styleMatch: 40, 
-        fitConfidence: 55, 
-        lowReturnRisk: false, 
-        occasionRelevance: "Special", 
-        reasoning: "📉 Style mismatch: Sequins score 2.1/10 on Emma's understated style index | No evening events detected in calendar signals | Workwear focus doesn't align."
+        score: 12, 
+        styleMatch: 10, 
+        fitConfidence: 20, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Gender mismatch: Men's basics outside Emma's shopping context | No menswear purchase history."
       },
       david: { 
-        score: 25, 
-        styleMatch: 20, 
-        fitConfidence: 30, 
-        lowReturnRisk: false, 
-        occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: Evening womenswear outside David's shopping context | No gift-intent signals active."
+        score: 96, 
+        styleMatch: 90, 
+        fitConfidence: 95, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Everyday", 
+        reasoning: "🏆 VALUE CHAMPION: Multi-pack format = David's preferred buying pattern | £5/tee hits his value threshold | Size L: 98% fit satisfaction | Purchased 4 similar multi-packs in 12 months | High offer responsiveness (opened 89% of bundle emails) | Cotton basics = 35% of annual spend."
       },
       aisha: { 
-        score: 97, 
-        styleMatch: 95, 
+        score: 8, 
+        styleMatch: 5, 
+        fitConfidence: 30, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: Men's basics irrelevant to Aisha's fashion-forward profile."
+      }
+    }
+  },
+  {
+    id: 7,
+    name: "Kids' Denim Jacket",
+    price: 28,
+    priceDisplay: "£28",
+    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=400&h=600&fit=crop",
+    category: "Kidswear",
+    popularity: 88,
+    personalizationScores: {
+      emma: { 
+        score: 18, 
+        styleMatch: 15, 
+        fitConfidence: 45, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ No relevance: Kidswear category excluded from Emma's professional wardrobe focus."
+      },
+      david: { 
+        score: 94, 
+        styleMatch: 88, 
+        fitConfidence: 90, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Casual", 
+        reasoning: "🎯 HIGH MATCH: Denim durability = David's #1 kidswear priority | Matches his 'practical & durable' filter | Age 9 size in stock | £28 within outerwear budget | Previously purchased denim for both sons | Layering essential for Manchester weather."
+      },
+      aisha: { 
+        score: 12, 
+        styleMatch: 10, 
+        fitConfidence: 40, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: No children in Aisha's profile | Zero kidswear engagement."
+      }
+    }
+  },
+  {
+    id: 8,
+    name: "Men's Casual Weekend Shirt",
+    price: 35,
+    priceDisplay: "£35",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop",
+    category: "Menswear",
+    popularity: 82,
+    personalizationScores: {
+      emma: { 
+        score: 10, 
+        styleMatch: 8, 
+        fitConfidence: 25, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Gender mismatch: Men's casualwear outside Emma's purchase context."
+      },
+      david: { 
+        score: 91, 
+        styleMatch: 86, 
         fitConfidence: 88, 
         lowReturnRisk: true, 
-        occasionRelevance: "Evening", 
-        reasoning: "🏆 PERFECT MATCH: Sequins = Aisha's #1 fabric for occasions (worn at 4 recent events) | New-in collection (24hrs) matches her 'first to trend' behaviour | Statement silhouette scores 9.4/10 | 3 upcoming events in social calendar | Size 10 evening dresses: 0% returns."
+        occasionRelevance: "Weekend", 
+        reasoning: "🎯 STRONG MATCH: Casual shirts = David's weekend uniform | Size L button-downs: 94% satisfaction | £35 in value range | Blue check pattern matches his preference | Weekend browsing peaked on this category | Complements denim collection."
+      },
+      aisha: { 
+        score: 8, 
+        styleMatch: 5, 
+        fitConfidence: 30, 
+        lowReturnRisk: true, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: Men's casualwear irrelevant to Aisha's profile."
+      }
+    }
+  },
+  // === AISHA'S TOP PICKS: Trend-Forward Evening ===
+  {
+    id: 9,
+    name: "Black Sequin Party Dress",
+    price: 89,
+    priceDisplay: "£89",
+    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=600&fit=crop",
+    category: "Eveningwear",
+    popularity: 78,
+    personalizationScores: {
+      emma: { 
+        score: 35, 
+        styleMatch: 30, 
+        fitConfidence: 50, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Special", 
+        reasoning: "📉 Style clash: Sequins score 1.8/10 on Emma's understated style index | Party wear = 3% of her purchases | Too bold for her professional wardrobe focus."
+      },
+      david: { 
+        score: 20, 
+        styleMatch: 15, 
+        fitConfidence: 25, 
+        lowReturnRisk: false, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: Evening womenswear outside David's family shopping context."
+      },
+      aisha: { 
+        score: 98, 
+        styleMatch: 96, 
+        fitConfidence: 92, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Party", 
+        reasoning: "🏆 PERFECT MATCH: Black sequins = Aisha's #1 party fabric (worn at 5 recent events) | Fitted silhouette trending +60% in her style cohort | New-in collection matches 'first to trend' behaviour | Statement look scores 9.6/10 | Size 10 party dresses: 0% returns | 3 upcoming events in social calendar."
       }
     }
   },
   {
     id: 10,
-    name: "Bold Print Maxi Skirt",
-    price: 49,
-    priceDisplay: "£49",
-    image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd2?w=400&h=600&fit=crop",
-    category: "Skirts",
-    popularity: 70,
+    name: "Fuchsia Satin Blazer",
+    price: 75,
+    priceDisplay: "£75",
+    image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&h=600&fit=crop",
+    category: "Statement Pieces",
+    popularity: 72,
     personalizationScores: {
       emma: { 
-        score: 42, 
-        styleMatch: 38, 
-        fitConfidence: 50, 
+        score: 28, 
+        styleMatch: 25, 
+        fitConfidence: 45, 
         lowReturnRisk: false, 
         occasionRelevance: "Casual", 
-        reasoning: "📉 Pattern conflict: Bold prints appear in 0% of Emma's purchases | Neutral palette preference (92% of wardrobe) | Return risk elevated for unfamiliar styles."
+        reasoning: "📉 Colour mismatch: Fuchsia appears in 0% of Emma's wardrobe | Bold colours score 2.1/10 on her preference index | Too statement for office setting."
       },
       david: { 
-        score: 30, 
-        styleMatch: 25, 
-        fitConfidence: 35, 
+        score: 18, 
+        styleMatch: 12, 
+        fitConfidence: 30, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Low relevance: Outside David's casualwear/kidswear focus | No womenswear patterns detected."
+        reasoning: "❌ Low relevance: Statement womenswear outside David's shopping focus."
       },
       aisha: { 
-        score: 94, 
-        styleMatch: 92, 
-        fitConfidence: 85, 
+        score: 95, 
+        styleMatch: 94, 
+        fitConfidence: 88, 
         lowReturnRisk: true, 
-        occasionRelevance: "Statement", 
-        reasoning: "🎯 STRONG MATCH: Bold prints = 78% of Aisha's recent purchases | Maxi length trending +35% in her style cohort | Instagram-saved similar styles 6x | Perfect for summer events calendar."
+        occasionRelevance: "Evening", 
+        reasoning: "🎯 TREND ALERT: Fuchsia pink = colour of the season in Aisha's style cohort | Satin fabric in her luxury preference tier | Blazer-as-statement matches her styling behaviour | Pairs with 4 items in cart | Instagram engagement: saved 8 similar looks."
       }
     }
   },
   {
     id: 11,
-    name: "Family Matching PJs Set",
-    price: 35,
-    priceDisplay: "£35",
-    image: "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=600&fit=crop",
-    category: "Sleepwear",
-    popularity: 80,
+    name: "Floral Maxi Dress",
+    price: 65,
+    priceDisplay: "£65",
+    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop",
+    category: "Statement Pieces",
+    popularity: 75,
     personalizationScores: {
       emma: { 
-        score: 35, 
-        styleMatch: 30, 
-        fitConfidence: 60, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Home", 
-        reasoning: "📉 Low intent match: Sleepwear is 2% of Emma's browse time | No family matching signals | Professional wardrobe remains priority."
+        score: 32, 
+        styleMatch: 28, 
+        fitConfidence: 55, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Casual", 
+        reasoning: "📉 Pattern conflict: Bold florals in 0% of Emma's purchases | Statement patterns score 1.9/10 on her style index | Return risk elevated for unfamiliar styles."
       },
       david: { 
-        score: 88, 
-        styleMatch: 82, 
-        fitConfidence: 85, 
-        lowReturnRisk: true, 
-        occasionRelevance: "Family", 
-        reasoning: "🎯 FAMILY FAVOURITE: Multi-size matching sets = David's top seasonal category | Purchased similar 2x in past year | 'Family activities' segment trigger | Price optimized for household budget | High engagement with family content."
+        score: 22, 
+        styleMatch: 18, 
+        fitConfidence: 35, 
+        lowReturnRisk: false, 
+        occasionRelevance: "N/A", 
+        reasoning: "❌ Category excluded: Statement womenswear outside David's family shopping scope."
       },
       aisha: { 
-        score: 25, 
-        styleMatch: 20, 
-        fitConfidence: 55, 
+        score: 93, 
+        styleMatch: 91, 
+        fitConfidence: 86, 
         lowReturnRisk: true, 
-        occasionRelevance: "Home", 
-        reasoning: "❌ Category excluded: No family/home focus in Aisha's profile | Trend relevance: minimal."
+        occasionRelevance: "Brunch", 
+        reasoning: "🎯 STRONG MATCH: Bold florals = Aisha's #2 pattern choice (purchased 4x in 12 months) | Flowy maxi in her preferred silhouettes | Versatile for brunch to evening | Trend index: 8.9/10 | Perfect for summer events."
       }
     }
   },
   {
     id: 12,
-    name: "Statement Earrings",
-    price: 18,
-    priceDisplay: "£18",
-    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=600&fit=crop",
-    category: "Accessories",
-    popularity: 73,
+    name: "Red Evening Gown",
+    price: 95,
+    priceDisplay: "£95",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=600&fit=crop",
+    category: "Eveningwear",
+    popularity: 70,
     personalizationScores: {
       emma: { 
-        score: 50, 
+        score: 48, 
         styleMatch: 45, 
-        fitConfidence: 100, 
+        fitConfidence: 60, 
         lowReturnRisk: true, 
-        occasionRelevance: "Accent", 
-        reasoning: "📊 Moderate add-on potential: Could complement workwear outfits | 'Statement' style bolder than Emma's typical accessory choices | Low price enables impulse add."
+        occasionRelevance: "Special", 
+        reasoning: "📊 Moderate match: Red evening gown is elegant but outside Emma's neutral zone | Could work for galas but not primary shopping intent."
       },
       david: { 
-        score: 40, 
-        styleMatch: 35, 
+        score: 25, 
+        styleMatch: 20, 
+        fitConfidence: 35, 
+        lowReturnRisk: false, 
+        occasionRelevance: "Gift", 
+        reasoning: "📊 Low match: Formal womenswear outside scope | Potential gift but no active gift-intent signals detected."
+      },
+      aisha: { 
+        score: 91, 
+        styleMatch: 89, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Evening", 
+        reasoning: "🎯 HIGH MATCH: Red = Aisha's preferred evening colour | Elegant gown silhouette in her top 3 fits | Event season = peak shopping intent | Size 10: 97% satisfaction | Statement piece for special occasions."
+      }
+    }
+  },
+  // === CROSS-APPEAL ITEMS ===
+  {
+    id: 13,
+    name: "Classic Black Leather Bag",
+    price: 65,
+    priceDisplay: "£65",
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=600&fit=crop",
+    category: "Accessories",
+    popularity: 92,
+    personalizationScores: {
+      emma: { 
+        score: 88, 
+        styleMatch: 90, 
+        fitConfidence: 100, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Work", 
+        reasoning: "🎯 STRONG MATCH: Black leather bags = Emma's accessory staple (owns 3 similar) | Professional aesthetic matches office use | Timeless style aligns with her 'investment pieces' behaviour | £65 in her accessory budget range."
+      },
+      david: { 
+        score: 55, 
+        styleMatch: 50, 
         fitConfidence: 100, 
         lowReturnRisk: true, 
         occasionRelevance: "Gift", 
-        reasoning: "📊 Gift potential: Anniversary date approaching (14 days) | Accessories = common gift category | Low price point enables trial."
+        reasoning: "📊 Gift potential: Partner's birthday in 3 weeks detected | Classic accessory = safe gift choice | Price within his gift budget | Moderate confidence on style match."
       },
       aisha: { 
-        score: 90, 
-        styleMatch: 92, 
+        score: 72, 
+        styleMatch: 68, 
         fitConfidence: 100, 
         lowReturnRisk: true, 
-        occasionRelevance: "Statement", 
-        reasoning: "🎯 PERFECT ADD-ON: Statement accessories purchased with 73% of Aisha's evening orders | Bold design matches trend profile | High-margin upsell opportunity | Complements sequin dress recommendation."
+        occasionRelevance: "Everyday", 
+        reasoning: "📊 Moderate match: Classic black bag is versatile but lacks statement appeal | Aisha prefers bold colours/textures in accessories | Practical add-on but not primary driver."
+      }
+    }
+  },
+  {
+    id: 14,
+    name: "Tan Suede Ankle Boots",
+    price: 85,
+    priceDisplay: "£85",
+    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop",
+    category: "Footwear",
+    popularity: 86,
+    personalizationScores: {
+      emma: { 
+        score: 85, 
+        styleMatch: 82, 
+        fitConfidence: 94, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Commute", 
+        reasoning: "✅ GOOD FIT: Emma's shoe size (6) has 96% satisfaction in ankle boots | Tan suede complements her neutral wardrobe | Comfortable for commute | Previously browsed similar 4x — price was consideration."
+      },
+      david: { 
+        score: 45, 
+        styleMatch: 40, 
+        fitConfidence: 65, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Gift", 
+        reasoning: "📊 Moderate gift potential: Women's footwear could be partner gift | Size uncertainty reduces confidence | £85 at upper gift budget."
+      },
+      aisha: { 
+        score: 78, 
+        styleMatch: 75, 
+        fitConfidence: 88, 
+        lowReturnRisk: true, 
+        occasionRelevance: "Day-to-Night", 
+        reasoning: "📊 Good versatility: Ankle boots work across Aisha's wardrobe | Tan adds warmth to her colour palette | Suede texture in her preference tier | Ranked below statement footwear."
       }
     }
   }
