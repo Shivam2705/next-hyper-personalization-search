@@ -20,7 +20,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep1",
       name: "Black Ponte Blazer",
-      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?w=200&h=250&fit=crop",
       price: "£89",
       date: "Oct 2024",
       category: "Workwear",
@@ -29,7 +29,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep2",
       name: "Ivory Satin Blouse",
-      image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
       price: "£52",
       date: "Sep 2024",
       category: "Tops",
@@ -38,7 +38,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep3",
       name: "Black Wide-Leg Trousers",
-      image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=200&h=250&fit=crop",
       price: "£48",
       date: "Aug 2024",
       category: "Workwear",
@@ -47,7 +47,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep4",
       name: "Oatmeal Cashmere Cardigan",
-      image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
       price: "£75",
       date: "Jul 2024",
       category: "Knitwear",
@@ -56,7 +56,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep5",
       name: "Nude Court Heels",
-      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=200&h=250&fit=crop",
       price: "£68",
       date: "Jun 2024",
       category: "Footwear",
