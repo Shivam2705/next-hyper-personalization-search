@@ -10,7 +10,8 @@ import {
   Star,
   SortAsc,
   LogOut,
-  User
+  User,
+  ArrowDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +22,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import ProductCardEnhanced from "@/components/ProductCardEnhanced";
+import PersonaProfile360 from "@/components/PersonaProfile360";
 import { personas, Persona } from "./Login";
 
 export interface Product {
@@ -630,19 +632,24 @@ const Store = () => {
       </nav>
 
       <main className="container mx-auto px-4 md:px-8 py-8">
-        {/* Page Header */}
+        {/* Customer 360 Profile Section */}
+        <PersonaProfile360 persona={persona} />
+
+        {/* Curated Collection Header */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Personalized for {persona.name}</span>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <ArrowDown className="w-5 h-5 text-primary-foreground animate-bounce" />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold">
+                {persona.name}'s <span className="gradient-text">Curated</span> Collection
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Products ranked by the signals above
+              </p>
+            </div>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            Your <span className="gradient-text">Curated</span> Collection
-          </h1>
-          <p className="text-muted-foreground max-w-2xl">
-            Products ranked and ordered based on your shopping behavior, style preferences, and purchase history. 
-            {isHyperPersonalized && " Each item shows why it was selected for you."}
-          </p>
         </div>
 
         {/* Personalization Banner */}
