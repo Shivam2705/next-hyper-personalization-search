@@ -46,12 +46,11 @@ export interface Product {
 }
 
 const allProducts: Product[] = [
-  // === EMMA'S TOP PICKS: Professional Workwear ===
-  // NOTE: These are NEW products, different from Emma's past purchases:
-  // Past: Black Ponte Blazer, Ivory Satin Blouse, Black Wide-Leg Trousers, Oatmeal Cashmere Cardigan, Nude Court Heels
+  // === EMMA'S TOP PICKS: Female Corporate Professional Workwear ===
+  // Past purchases: Black Tailored Blazer, Ivory Silk Blouse, Black Midi Pencil Skirt, Camel Cashmere Cardigan, Nude Patent Heels
   {
     id: 1,
-    name: "Navy Belted Shirtdress",
+    name: "Navy Wrap Dress",
     price: 85,
     priceDisplay: "£85",
     image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
@@ -64,7 +63,7 @@ const allProducts: Product[] = [
         fitConfidence: 94, 
         lowReturnRisk: true, 
         occasionRelevance: "Office", 
-        reasoning: "🏆 NEW RECOMMENDATION: You own a Black Ponte Blazer — this Navy Shirtdress creates a fresh workwear rotation | Different silhouette from your existing Wide-Leg Trousers | Same professional aesthetic you love | Size 12 structured fits: 0% return rate | £85 matches your £70-100 workwear budget."
+        reasoning: "🏆 NEW RECOMMENDATION: You own a Black Tailored Blazer — this Navy Wrap Dress creates a fresh workwear rotation | Different silhouette from your Pencil Skirt | Same professional aesthetic you love | Size 12 structured fits: 0% return rate | £85 matches your £70-100 workwear budget."
       },
       david: { 
         score: 28, 
@@ -86,10 +85,10 @@ const allProducts: Product[] = [
   },
   {
     id: 2,
-    name: "White Silk Office Blouse",
+    name: "White Crepe Blouse",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=600&fit=crop",
     category: "Tops",
     popularity: 82,
     personalizationScores: {
@@ -99,7 +98,7 @@ const allProducts: Product[] = [
         fitConfidence: 91, 
         lowReturnRisk: true, 
         occasionRelevance: "Office", 
-        reasoning: "🎯 INSPIRED BY PURCHASE: You loved your Ivory Satin Blouse (5★) — this White Silk version offers premium upgrade | Different fabric, same elegant style | Complements your Black Blazer | Size 12 blouses: 96% fit satisfaction."
+        reasoning: "🎯 INSPIRED BY PURCHASE: You loved your Ivory Silk Blouse (5★) — this White Crepe version offers textured upgrade | Different fabric, same elegant style | Complements your Black Blazer | Size 12 blouses: 96% fit satisfaction."
       },
       david: { 
         score: 22, 
@@ -121,10 +120,10 @@ const allProducts: Product[] = [
   },
   {
     id: 3,
-    name: "Charcoal Wool Trousers",
+    name: "Grey Tailored Trousers",
     price: 55,
     priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&h=600&fit=crop",
     category: "Workwear",
     popularity: 85,
     personalizationScores: {
@@ -134,7 +133,7 @@ const allProducts: Product[] = [
         fitConfidence: 96, 
         lowReturnRisk: true, 
         occasionRelevance: "Versatile", 
-        reasoning: "✅ COMPLEMENTS WARDROBE: You own Black Wide-Leg Trousers — these Charcoal Slim-Cut offer different silhouette & colour | Wool blend matches your Cashmere Cardigan quality preference | Pairs with your existing Blazer | Zero returns on similar cuts."
+        reasoning: "✅ COMPLEMENTS WARDROBE: You own a Black Pencil Skirt — these Grey Tailored Trousers offer different silhouette & colour | Premium wool matches your Cashmere Cardigan quality | Pairs with your Black Blazer | Zero returns on similar cuts."
       },
       david: { 
         score: 25, 
@@ -169,7 +168,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Commute", 
-        reasoning: "🎯 PATTERN MATCH: You own an Oatmeal Cashmere Cardigan — this Camel Coat extends your neutral outerwear | Different weight for colder months | Pairs with your professional pieces | Premium quality aligns with your investment-piece behaviour."
+        reasoning: "🎯 PATTERN MATCH: You own a Camel Cashmere Cardigan — this Camel Wool Coat extends your neutral layering | Different weight for colder months | Pairs with your professional pieces | Premium quality aligns with your investment-piece behaviour."
       },
       david: { 
         score: 32, 
