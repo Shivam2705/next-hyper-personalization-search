@@ -15,22 +15,22 @@ interface PastPurchase {
 // Past purchases - DIFFERENT from current recommendations but establish patterns
 const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
   emma: [
-    // Emma's past: Female professional workwear - structured, clean, elegant
+    // Emma: Female professional workwear - structured, clean, elegant (2025 dates)
     {
       id: "ep1",
       name: "Black Tailored Blazer",
       image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
       price: "£89",
-      date: "Oct 2024",
+      date: "Jan 2026",
       category: "Workwear",
       rating: 5
     },
     {
       id: "ep2",
       name: "Cream Silk Camisole",
-      image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=200&h=250&fit=crop",
       price: "£52",
-      date: "Sep 2024",
+      date: "Dec 2025",
       category: "Tops",
       rating: 5
     },
@@ -39,56 +39,55 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
       name: "Black Pencil Skirt",
       image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
       price: "£48",
-      date: "Aug 2024",
+      date: "Nov 2025",
       category: "Workwear",
       rating: 5
     },
     {
       id: "ep4",
-      name: "Beige Cashmere Wrap",
-      image: "https://images.unsplash.com/photo-1525450824786-227cbef70703?w=200&h=250&fit=crop",
+      name: "Beige Cashmere Cardigan",
+      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
       price: "£75",
-      date: "Jul 2024",
+      date: "Sep 2025",
       category: "Knitwear",
       rating: 4
     },
     {
       id: "ep5",
-      name: "Nude Pointed Heels",
+      name: "Nude Court Heels",
       image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
       price: "£68",
-      date: "Jun 2024",
+      date: "Aug 2025",
       category: "Footwear",
       rating: 5
     }
   ],
   david: [
-    // David's past: Establishes family value, kidswear + menswear basics pattern
-    // These are DIFFERENT from recommendations but inspire them
+    // David: Family value shopper - kidswear + menswear basics (2025 dates)
     {
       id: "dp1",
       name: "Boys' Grey School Jumper",
       image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
       price: "£14",
-      date: "Sep 2024",
+      date: "Jan 2026",
       category: "Kidswear",
       rating: 5
     },
     {
       id: "dp2",
       name: "Men's Black Joggers",
-      image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=200&h=250&fit=crop",
       price: "£28",
-      date: "Aug 2024",
+      date: "Dec 2025",
       category: "Menswear",
       rating: 4
     },
     {
       id: "dp3",
-      name: "Boys' Waterproof Raincoat",
-      image: "https://images.unsplash.com/photo-1502451885777-5d53fd7e1e7e?w=200&h=250&fit=crop",
+      name: "Boys' Navy Raincoat",
+      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=200&h=250&fit=crop",
       price: "£32",
-      date: "Jul 2024",
+      date: "Oct 2025",
       category: "Kidswear",
       rating: 5
     },
@@ -97,65 +96,64 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
       name: "Men's White T-Shirt (2pk)",
       image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=250&fit=crop",
       price: "£16",
-      date: "Jun 2024",
+      date: "Sep 2025",
       category: "Menswear Basics",
       rating: 5
     },
     {
       id: "dp5",
-      name: "Men's Navy Hoodie",
+      name: "Men's Navy Zip Hoodie",
       image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=250&fit=crop",
       price: "£35",
-      date: "May 2024",
+      date: "Aug 2025",
       category: "Menswear",
       rating: 4
     }
   ],
   aisha: [
-    // Aisha's past: Establishes bold, trend-forward, eveningwear pattern
-    // These are DIFFERENT from recommendations but inspire them
+    // Aisha: Female trend-forward, bold eveningwear & statement pieces (2025 dates)
     {
       id: "ap1",
       name: "Cobalt Blue Wrap Dress",
-      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
       price: "£72",
-      date: "Oct 2024",
+      date: "Jan 2026",
       category: "Eveningwear",
       rating: 5
     },
     {
       id: "ap2",
-      name: "Silver Chain Necklace",
+      name: "Gold Statement Earrings",
       image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=250&fit=crop",
       price: "£32",
-      date: "Sep 2024",
+      date: "Dec 2025",
       category: "Accessories",
       rating: 5
     },
     {
       id: "ap3",
-      name: "Orange Cropped Blazer",
-      image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=200&h=250&fit=crop",
+      name: "Hot Pink Cropped Blazer",
+      image: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=200&h=250&fit=crop",
       price: "£68",
-      date: "Aug 2024",
+      date: "Nov 2025",
       category: "Statement Pieces",
       rating: 5
     },
     {
       id: "ap4",
-      name: "Black Platform Boots",
-      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
+      name: "Black Strappy Heels",
+      image: "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=200&h=250&fit=crop",
       price: "£85",
-      date: "Jul 2024",
+      date: "Sep 2025",
       category: "Footwear",
       rating: 5
     },
     {
       id: "ap5",
-      name: "Tropical Print Midi Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
+      name: "Floral Satin Midi Skirt",
+      image: "https://images.unsplash.com/photo-1577900232427-18219b9166a0?w=200&h=250&fit=crop",
       price: "£48",
-      date: "Jun 2024",
+      date: "Aug 2025",
       category: "Statement Pieces",
       rating: 4
     }
@@ -165,22 +163,22 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
 // Why NEW recommendations match past purchase PATTERNS (not same products)
 const purchaseInsights: Record<string, string[]> = {
   emma: [
-    "New: Navy Shirtdress → Extends workwear rotation (you own Black Blazer)",
-    "New: White Silk Blouse → Complements Ivory Satin Blouse you loved",
-    "New: Charcoal Trousers → Different cut from your Wide-Leg pair",
-    "New: Camel Coat → Neutral outerwear to match your Oatmeal Cardigan"
+    "→ Navy Shirtdress: Extends your professional wardrobe beyond the Black Blazer you love",
+    "→ White Silk Blouse: Premium upgrade from your Cream Camisole — same elegance, new fabric",
+    "→ Charcoal Trousers: Structured fit like your Pencil Skirt, different silhouette",
+    "→ Camel Coat: Neutral layering piece to complement your Beige Cardigan"
   ],
   david: [
-    "New: Navy Polo → School essentials (you bought Grey Jumper)",
-    "New: Multi-Pack Tees → Value basics like your 2pk T-shirts",
-    "New: Denim Jacket → Outerwear rotation after Raincoat purchase",
-    "New: Casual Shirt → Weekend upgrade from your Hoodie"
+    "→ Boys' Navy Polo: School essentials rotation — builds on Grey Jumper purchase",
+    "→ Men's Multi-Pack Tees: Value basics matching your 2pk T-shirt buying pattern",
+    "→ Boys' Puffer Jacket: Outerwear upgrade from the Navy Raincoat",
+    "→ Men's Casual Shirt: Weekend style step-up from your Hoodie preference"
   ],
   aisha: [
-    "New: Black Sequin Dress → Statement evening (you own Cobalt Wrap)",
-    "New: Fuchsia Blazer → Bold colour like your Orange Blazer success",
-    "New: Floral Maxi → Print pattern extends your Tropical Skirt style",
-    "New: Red Gown → Event-ready addition to your occasion wardrobe"
+    "→ Black Sequin Dress: Evening statement — different colour from your Cobalt Wrap",
+    "→ Fuchsia Blazer: Bold colour story continuing your Hot Pink Blazer success",
+    "→ Emerald Maxi Dress: Rich jewel tone like your Cobalt, fresh silhouette",
+    "→ Gold Clutch Bag: Completes your Gold Earrings accessory story"
   ]
 };
 
