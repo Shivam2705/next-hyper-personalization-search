@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Customer360Chart from "@/components/Customer360Chart";
+import HowItWorksSection from "@/components/HowItWorksSection";
 
 const valueProps = [
   {
@@ -41,28 +42,7 @@ const valueProps = [
   }
 ];
 
-const howItWorks = [
-  {
-    step: "01",
-    title: "Data Unification",
-    description: "We aggregate signals from browsing, purchases, returns, loyalty, and in-store interactions into a unified Consumer 360° profile."
-  },
-  {
-    step: "02", 
-    title: "Intelligent Segmentation",
-    description: "Machine learning clusters shoppers by style affinity, life stage, price sensitivity, and fit confidence — not just demographics."
-  },
-  {
-    step: "03",
-    title: "Agentic Ranking",
-    description: "Our AI agent dynamically reorders products, selects imagery, and crafts personalized narratives for each individual shopper."
-  },
-  {
-    step: "04",
-    title: "Continuous Learning",
-    description: "Every interaction feeds back into the system, continuously refining personalization accuracy and relevance."
-  }
-];
+// How it works data moved to HowItWorksSection component
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -235,33 +215,8 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="section-padding relative">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              How <span className="gradient-text">It Works</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Four intelligent steps transform raw data into personalized shopping experiences.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {howItWorks.map((item, idx) => (
-              <div key={item.step} className="glass-card p-6 hover-lift relative">
-                <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 mt-4">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* How It Works - Enhanced Section */}
+      <HowItWorksSection />
 
       {/* Value Proposition */}
       <section className="section-padding relative bg-gradient-to-b from-background via-card/30 to-background">
