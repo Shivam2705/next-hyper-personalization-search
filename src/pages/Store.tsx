@@ -62,7 +62,7 @@ const allProducts: Product[] = [
         fitConfidence: 94, 
         lowReturnRisk: true, 
         occasionRelevance: "Office", 
-        reasoning: "🏆 TOP MATCH: Navy dresses = Emma's #1 category (5 purchased in 18 months) | Size 12 structured fits show 0% return rate | Price £85 within her £70-100 workwear budget | Complements 8 items in current wardrobe | Professional style matches Mon-Fri browsing peak."
+        reasoning: "🏆 NEW RECOMMENDATION: You own a Black Ponte Blazer — this Navy Shirtdress creates a fresh workwear rotation | Different silhouette from your existing Wide-Leg Trousers | Same professional aesthetic you love | Size 12 structured fits: 0% return rate | £85 matches your £70-100 workwear budget."
       },
       david: { 
         score: 28, 
@@ -70,7 +70,7 @@ const allProducts: Product[] = [
         fitConfidence: 35, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category mismatch: Women's tailoring outside David's family-focused shopping | No womenswear purchase history | Price 60% above his typical item spend."
+        reasoning: "❌ Category mismatch: Women's workwear outside David's family-focused shopping | His history: Boys' Jumpers, Men's Joggers — no womenswear signals."
       },
       aisha: { 
         score: 52, 
@@ -78,7 +78,7 @@ const allProducts: Product[] = [
         fitConfidence: 65, 
         lowReturnRisk: true, 
         occasionRelevance: "Work", 
-        reasoning: "📉 Style gap: Classic navy too understated for Aisha's trend-forward preference | Structured silhouette ranks 4.2/10 on her statement index | Office wear only 8% of her purchases."
+        reasoning: "📉 Style gap: Classic navy too understated for Aisha | Her history: Cobalt Wrap Dress, Orange Blazer — she prefers bold statement pieces over classic workwear."
       }
     }
   },
@@ -97,7 +97,7 @@ const allProducts: Product[] = [
         fitConfidence: 91, 
         lowReturnRisk: true, 
         occasionRelevance: "Office", 
-        reasoning: "🎯 STRONG MATCH: White blouses appear in 6 of Emma's saved outfits | Silk fabric in her premium preference tier | Size 12 blouses: 96% fit satisfaction | Pairs perfectly with her navy trouser collection | Meeting-appropriate per her calendar integration."
+        reasoning: "🎯 INSPIRED BY PURCHASE: You loved your Ivory Satin Blouse (5★) — this White Silk version offers premium upgrade | Different fabric, same elegant style | Complements your Black Blazer | Size 12 blouses: 96% fit satisfaction."
       },
       david: { 
         score: 22, 
@@ -105,7 +105,7 @@ const allProducts: Product[] = [
         fitConfidence: 30, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ No relevance: Women's workwear outside David's shopping scope | Zero formal womenswear in 36-month history."
+        reasoning: "❌ No relevance: David buys Men's T-shirts & Hoodies, Boys' School items — Women's blouses outside his scope."
       },
       aisha: { 
         score: 58, 
@@ -113,7 +113,7 @@ const allProducts: Product[] = [
         fitConfidence: 70, 
         lowReturnRisk: true, 
         occasionRelevance: "Basic", 
-        reasoning: "📊 Moderate fit: Classic white blouse too minimal for Aisha's bold aesthetic | Could layer but not a statement piece | Ranks low on her trend-forward index (3.8/10)."
+        reasoning: "📊 Moderate: Classic white blouse lacks the statement factor | Aisha's history shows Pink Tops, Orange Blazers — she prefers bold colours."
       }
     }
   },
@@ -132,7 +132,7 @@ const allProducts: Product[] = [
         fitConfidence: 96, 
         lowReturnRisk: true, 
         occasionRelevance: "Versatile", 
-        reasoning: "✅ PERFECT FIT: Emma's trouser size (10 Long) shows 98% satisfaction in slim cuts | Charcoal = her #2 colour (worn 24% of workdays) | Wool blend matches her quality-first preference | Pairs with 5 blazers in wardrobe | Zero returns on similar silhouettes."
+        reasoning: "✅ COMPLEMENTS WARDROBE: You own Black Wide-Leg Trousers — these Charcoal Slim-Cut offer different silhouette & colour | Wool blend matches your Cashmere Cardigan quality preference | Pairs with your existing Blazer | Zero returns on similar cuts."
       },
       david: { 
         score: 25, 
@@ -140,7 +140,7 @@ const allProducts: Product[] = [
         fitConfidence: 35, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Gender mismatch: Women's tailored trousers outside David's purchase context | Price £20 above his casualwear average."
+        reasoning: "❌ Gender mismatch: David's history is Men's Joggers, Hoodies — Women's tailored trousers outside purchase context."
       },
       aisha: { 
         score: 45, 
@@ -148,7 +148,7 @@ const allProducts: Product[] = [
         fitConfidence: 60, 
         lowReturnRisk: true, 
         occasionRelevance: "Basic", 
-        reasoning: "📉 Low priority: Classic tailoring scores 2.8/10 on Aisha's trend index | Charcoal not in her vibrant colour palette | Basic workwear not her shopping intent."
+        reasoning: "📉 Low priority: Aisha's history: Tropical Skirts, Wrap Dresses — classic workwear trousers don't match her bold, trend-forward preference."
       }
     }
   },
@@ -167,7 +167,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Commute", 
-        reasoning: "🎯 SEASONAL PRIORITY: Camel coats trending +45% in Reading area this month | Neutral tone matches Emma's palette (89% neutral wardrobe) | Structured silhouette aligns with professional aesthetic | Premium outerwear category she engages with quarterly."
+        reasoning: "🎯 PATTERN MATCH: You own an Oatmeal Cashmere Cardigan — this Camel Coat extends your neutral outerwear | Different weight for colder months | Pairs with your professional pieces | Premium quality aligns with your investment-piece behaviour."
       },
       david: { 
         score: 32, 
@@ -175,7 +175,7 @@ const allProducts: Product[] = [
         fitConfidence: 40, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Outside scope: Women's premium outerwear | £120 significantly above David's £55 average | No womenswear purchase signals."
+        reasoning: "❌ Outside scope: David's spend: £14-35 range | His outerwear purchases: Boys' Raincoats, Men's Hoodies — Women's premium coats don't fit."
       },
       aisha: { 
         score: 65, 
@@ -183,7 +183,7 @@ const allProducts: Product[] = [
         fitConfidence: 72, 
         lowReturnRisk: true, 
         occasionRelevance: "Layering", 
-        reasoning: "📊 Moderate: Classic camel is timeless but lacks statement appeal for Aisha | Neutral tone appears in only 15% of her wardrobe | Practical but not trend-driven."
+        reasoning: "📊 Moderate: Classic camel is timeless but neutral | Aisha's history shows Orange Blazer, Bold accessories — she prefers statement over classic."
       }
     }
   },
@@ -203,7 +203,7 @@ const allProducts: Product[] = [
         fitConfidence: 50, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ No relevance: Zero kidswear in Emma's 36-month history | No children detected in household signals | Category excluded from personalized feed."
+        reasoning: "❌ No relevance: Emma's history is all womenswear (Blazers, Blouses, Trousers) — zero kidswear signals in 36-month profile."
       },
       david: { 
         score: 97, 
@@ -211,7 +211,7 @@ const allProducts: Product[] = [
         fitConfidence: 94, 
         lowReturnRisk: true, 
         occasionRelevance: "School", 
-        reasoning: "🏆 TOP MATCH: David's sons (ages 7, 9) = primary shopping focus | School-appropriate polo purchased 6x annually | Navy = required uniform colour | Size age 7-8 shows 100% fit accuracy | £12 within his £10-15 kidswear sweet spot | Multi-buy offer available (3 for £30)."
+        reasoning: "🏆 EXTENDS PURCHASE PATTERN: You bought Boys' Grey School Jumper — this Navy Polo completes the uniform set | Different item, same school category | £12 matches your £10-15 kidswear sweet spot | Multi-buy available (3 for £30)."
       },
       aisha: { 
         score: 10, 
@@ -219,7 +219,7 @@ const allProducts: Product[] = [
         fitConfidence: 40, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: No children in Aisha's profile | Zero kidswear engagement signals."
+        reasoning: "❌ Category excluded: Aisha's profile shows eveningwear, accessories — no children or kidswear engagement."
       }
     }
   },
@@ -238,7 +238,7 @@ const allProducts: Product[] = [
         fitConfidence: 20, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Gender mismatch: Men's basics outside Emma's shopping context | No menswear purchase history."
+        reasoning: "❌ Gender mismatch: Emma's purchase history is all womenswear — no menswear signals detected."
       },
       david: { 
         score: 96, 
@@ -246,7 +246,7 @@ const allProducts: Product[] = [
         fitConfidence: 95, 
         lowReturnRisk: true, 
         occasionRelevance: "Everyday", 
-        reasoning: "🏆 VALUE CHAMPION: Multi-pack format = David's preferred buying pattern | £5/tee hits his value threshold | Size L: 98% fit satisfaction | Purchased 4 similar multi-packs in 12 months | High offer responsiveness (opened 89% of bundle emails) | Cotton basics = 35% of annual spend."
+        reasoning: "🏆 VALUE EXTENSION: You bought Men's White T-Shirt 2pk (5★) — this 5-pack offers better value per item | Different colours expand basics rotation | Same quality, £5/tee | Size L: 98% fit satisfaction | Matches your multi-pack buying pattern."
       },
       aisha: { 
         score: 8, 
@@ -254,7 +254,7 @@ const allProducts: Product[] = [
         fitConfidence: 30, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: Men's basics irrelevant to Aisha's fashion-forward profile."
+        reasoning: "❌ Category excluded: Aisha's history: Statement dresses, Bold accessories — Men's basics completely outside profile."
       }
     }
   },
@@ -273,7 +273,7 @@ const allProducts: Product[] = [
         fitConfidence: 45, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ No relevance: Kidswear category excluded from Emma's professional wardrobe focus."
+        reasoning: "❌ No relevance: Emma's wardrobe is professional womenswear — Kidswear excluded from her personalised feed."
       },
       david: { 
         score: 94, 
@@ -281,7 +281,7 @@ const allProducts: Product[] = [
         fitConfidence: 90, 
         lowReturnRisk: true, 
         occasionRelevance: "Casual", 
-        reasoning: "🎯 HIGH MATCH: Denim durability = David's #1 kidswear priority | Matches his 'practical & durable' filter | Age 9 size in stock | £28 within outerwear budget | Previously purchased denim for both sons | Layering essential for Manchester weather."
+        reasoning: "🎯 OUTERWEAR ROTATION: You bought Boys' Waterproof Raincoat — this Denim Jacket adds casual weekend layer | Different style for dry weather | £28 within your kidswear budget | Durable fabric matches your 'practical first' preference."
       },
       aisha: { 
         score: 12, 
@@ -289,7 +289,7 @@ const allProducts: Product[] = [
         fitConfidence: 40, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: No children in Aisha's profile | Zero kidswear engagement."
+        reasoning: "❌ Category excluded: Aisha's purchases are all womenswear occasion pieces — no kidswear signals."
       }
     }
   },
@@ -308,7 +308,7 @@ const allProducts: Product[] = [
         fitConfidence: 25, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Gender mismatch: Men's casualwear outside Emma's purchase context."
+        reasoning: "❌ Gender mismatch: Emma buys womenswear only — her profile shows zero menswear purchase signals."
       },
       david: { 
         score: 91, 
@@ -316,7 +316,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Weekend", 
-        reasoning: "🎯 STRONG MATCH: Casual shirts = David's weekend uniform | Size L button-downs: 94% satisfaction | £35 in value range | Blue check pattern matches his preference | Weekend browsing peaked on this category | Complements denim collection."
+        reasoning: "🎯 STYLE UPGRADE: You own a Navy Hoodie (casual) — this Weekend Shirt elevates your off-duty look | Different category, same casual vibe | £35 in your value range | Size L button-downs: 94% satisfaction | Great for family outings."
       },
       aisha: { 
         score: 8, 
@@ -324,7 +324,7 @@ const allProducts: Product[] = [
         fitConfidence: 30, 
         lowReturnRisk: true, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: Men's casualwear irrelevant to Aisha's profile."
+        reasoning: "❌ Category excluded: Aisha's history is womenswear occasion pieces — Men's casualwear irrelevant."
       }
     }
   },
@@ -344,7 +344,7 @@ const allProducts: Product[] = [
         fitConfidence: 50, 
         lowReturnRisk: false, 
         occasionRelevance: "Special", 
-        reasoning: "📉 Style clash: Sequins score 1.8/10 on Emma's understated style index | Party wear = 3% of her purchases | Too bold for her professional wardrobe focus."
+        reasoning: "📉 Style clash: Emma owns Black Blazer, Ivory Blouse — sequins too bold vs her understated professional aesthetic | Party wear = 3% of her purchases."
       },
       david: { 
         score: 20, 
@@ -352,7 +352,7 @@ const allProducts: Product[] = [
         fitConfidence: 25, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: Evening womenswear outside David's family shopping context."
+        reasoning: "❌ Category excluded: David's profile is kidswear + menswear basics — evening womenswear completely outside scope."
       },
       aisha: { 
         score: 98, 
@@ -360,7 +360,7 @@ const allProducts: Product[] = [
         fitConfidence: 92, 
         lowReturnRisk: true, 
         occasionRelevance: "Party", 
-        reasoning: "🏆 PERFECT MATCH: Black sequins = Aisha's #1 party fabric (worn at 5 recent events) | Fitted silhouette trending +60% in her style cohort | New-in collection matches 'first to trend' behaviour | Statement look scores 9.6/10 | Size 10 party dresses: 0% returns | 3 upcoming events in social calendar."
+        reasoning: "🏆 EXTENDS COLLECTION: You own Cobalt Blue Wrap Dress — this Black Sequin adds party-ready option | Different colour & fabric, same occasion category | Complements your Statement accessories | Size 10 evening: 0% returns | 3 upcoming events detected."
       }
     }
   },
@@ -379,7 +379,7 @@ const allProducts: Product[] = [
         fitConfidence: 45, 
         lowReturnRisk: false, 
         occasionRelevance: "Casual", 
-        reasoning: "📉 Colour mismatch: Fuchsia appears in 0% of Emma's wardrobe | Bold colours score 2.1/10 on her preference index | Too statement for office setting."
+        reasoning: "📉 Colour mismatch: Emma owns Black Blazer, Oatmeal Cardigan — fuchsia is 0% of her neutral wardrobe | Too bold for office setting."
       },
       david: { 
         score: 18, 
@@ -387,7 +387,7 @@ const allProducts: Product[] = [
         fitConfidence: 30, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Low relevance: Statement womenswear outside David's shopping focus."
+        reasoning: "❌ Low relevance: David buys practical kidswear & menswear — Statement womenswear outside his focus."
       },
       aisha: { 
         score: 95, 
@@ -395,7 +395,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Evening", 
-        reasoning: "🎯 TREND ALERT: Fuchsia pink = colour of the season in Aisha's style cohort | Satin fabric in her luxury preference tier | Blazer-as-statement matches her styling behaviour | Pairs with 4 items in cart | Instagram engagement: saved 8 similar looks."
+        reasoning: "🎯 COLOUR PATTERN: You loved your Orange Cropped Blazer (5★) — this Fuchsia Satin offers fresh bold alternative | Different colour, same statement blazer style | Pairs with your Silver Necklace | Instagram engagement: 8 similar saves."
       }
     }
   },
@@ -414,7 +414,7 @@ const allProducts: Product[] = [
         fitConfidence: 55, 
         lowReturnRisk: false, 
         occasionRelevance: "Casual", 
-        reasoning: "📉 Pattern conflict: Bold florals in 0% of Emma's purchases | Statement patterns score 1.9/10 on her style index | Return risk elevated for unfamiliar styles."
+        reasoning: "📉 Pattern conflict: Emma owns plain Blazers, Trousers — bold florals score 1.9/10 on her style index | Return risk elevated."
       },
       david: { 
         score: 22, 
@@ -422,7 +422,7 @@ const allProducts: Product[] = [
         fitConfidence: 35, 
         lowReturnRisk: false, 
         occasionRelevance: "N/A", 
-        reasoning: "❌ Category excluded: Statement womenswear outside David's family shopping scope."
+        reasoning: "❌ Category excluded: David's purchases are kidswear & menswear only — Statement womenswear outside scope."
       },
       aisha: { 
         score: 93, 
@@ -430,7 +430,7 @@ const allProducts: Product[] = [
         fitConfidence: 86, 
         lowReturnRisk: true, 
         occasionRelevance: "Brunch", 
-        reasoning: "🎯 STRONG MATCH: Bold florals = Aisha's #2 pattern choice (purchased 4x in 12 months) | Flowy maxi in her preferred silhouettes | Versatile for brunch to evening | Trend index: 8.9/10 | Perfect for summer events."
+        reasoning: "🎯 PRINT EXTENSION: You own Tropical Print Midi Skirt (4★) — this Floral Maxi Dress offers full-outfit print statement | Different silhouette, same bold pattern preference | Versatile for brunch to evening."
       }
     }
   },
@@ -449,7 +449,7 @@ const allProducts: Product[] = [
         fitConfidence: 60, 
         lowReturnRisk: true, 
         occasionRelevance: "Special", 
-        reasoning: "📊 Moderate match: Red evening gown is elegant but outside Emma's neutral zone | Could work for galas but not primary shopping intent."
+        reasoning: "📊 Moderate match: Emma's wardrobe is professional neutrals — red gown is elegant but outside her colour comfort zone."
       },
       david: { 
         score: 25, 
@@ -457,7 +457,7 @@ const allProducts: Product[] = [
         fitConfidence: 35, 
         lowReturnRisk: false, 
         occasionRelevance: "Gift", 
-        reasoning: "📊 Low match: Formal womenswear outside scope | Potential gift but no active gift-intent signals detected."
+        reasoning: "📊 Low match: David's history shows practical purchases — formal womenswear not his shopping intent."
       },
       aisha: { 
         score: 91, 
@@ -465,7 +465,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Evening", 
-        reasoning: "🎯 HIGH MATCH: Red = Aisha's preferred evening colour | Elegant gown silhouette in her top 3 fits | Event season = peak shopping intent | Size 10: 97% satisfaction | Statement piece for special occasions."
+        reasoning: "🎯 OCCASION ADDITION: You own Cobalt Wrap Dress, Emerald pieces — this Red Gown adds powerful evening colour | Different from your blues/greens | Complements your Black Heels | Event season = peak intent."
       }
     }
   },
@@ -485,7 +485,7 @@ const allProducts: Product[] = [
         fitConfidence: 100, 
         lowReturnRisk: true, 
         occasionRelevance: "Work", 
-        reasoning: "🎯 STRONG MATCH: Black leather bags = Emma's accessory staple (owns 3 similar) | Professional aesthetic matches office use | Timeless style aligns with her 'investment pieces' behaviour | £65 in her accessory budget range."
+        reasoning: "🎯 ACCESSORY UPDATE: You own Nude Court Heels (5★) — this Black Leather Bag completes professional accessories | Different category, same quality aesthetic | Pairs with your Blazer collection | £65 within accessory budget."
       },
       david: { 
         score: 55, 
@@ -493,7 +493,7 @@ const allProducts: Product[] = [
         fitConfidence: 100, 
         lowReturnRisk: true, 
         occasionRelevance: "Gift", 
-        reasoning: "📊 Gift potential: Partner's birthday in 3 weeks detected | Classic accessory = safe gift choice | Price within his gift budget | Moderate confidence on style match."
+        reasoning: "📊 Gift potential: David's practical — but partner's birthday detected | Classic accessory = safe gift | Price within his gift budget."
       },
       aisha: { 
         score: 72, 
@@ -501,7 +501,7 @@ const allProducts: Product[] = [
         fitConfidence: 100, 
         lowReturnRisk: true, 
         occasionRelevance: "Everyday", 
-        reasoning: "📊 Moderate match: Classic black bag is versatile but lacks statement appeal | Aisha prefers bold colours/textures in accessories | Practical add-on but not primary driver."
+        reasoning: "📊 Moderate: Aisha owns Silver Chain Necklace — but prefers bold accessories | Classic black less exciting than her statement pieces."
       }
     }
   },
@@ -520,7 +520,7 @@ const allProducts: Product[] = [
         fitConfidence: 94, 
         lowReturnRisk: true, 
         occasionRelevance: "Commute", 
-        reasoning: "✅ GOOD FIT: Emma's shoe size (6) has 96% satisfaction in ankle boots | Tan suede complements her neutral wardrobe | Comfortable for commute | Previously browsed similar 4x — price was consideration."
+        reasoning: "✅ FOOTWEAR ROTATION: You own Nude Court Heels — these Tan Ankle Boots add casual comfort option | Different style for relaxed days | Neutral tone matches your wardrobe | Comfortable for commute."
       },
       david: { 
         score: 45, 
@@ -528,7 +528,7 @@ const allProducts: Product[] = [
         fitConfidence: 65, 
         lowReturnRisk: true, 
         occasionRelevance: "Gift", 
-        reasoning: "📊 Moderate gift potential: Women's footwear could be partner gift | Size uncertainty reduces confidence | £85 at upper gift budget."
+        reasoning: "📊 Moderate gift potential: Women's footwear could be partner gift | Size uncertainty reduces confidence."
       },
       aisha: { 
         score: 78, 
@@ -536,7 +536,7 @@ const allProducts: Product[] = [
         fitConfidence: 88, 
         lowReturnRisk: true, 
         occasionRelevance: "Day-to-Night", 
-        reasoning: "📊 Good versatility: Ankle boots work across Aisha's wardrobe | Tan adds warmth to her colour palette | Suede texture in her preference tier | Ranked below statement footwear."
+        reasoning: "📊 Good versatility: Aisha owns Black Platform Boots — these Tan Suede offer daytime alternative | Different colour adds warmth | Ranked below her statement footwear."
       }
     }
   }
