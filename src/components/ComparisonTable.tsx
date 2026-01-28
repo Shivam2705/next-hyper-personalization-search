@@ -22,168 +22,174 @@ import {
   BarChart3,
   Lightbulb,
   Clock,
-  Eye
+  Eye,
+  Layers
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const comparisonData = [
   {
-    dimension: "Customer Understanding",
-    icon: Users,
-    category: "Business",
-    tooltip: "How well does the system know each shopper?",
+    dimension: "Data Foundation",
+    icon: Database,
+    category: "Technical",
     traditional: {
-      rulesBased: { value: "Groups customers by age & gender only", status: "poor" },
-      collaborativeFiltering: { value: "Finds similar shoppers, assumes they want the same things", status: "medium" },
-      contentBased: { value: "Matches products by category, ignores the person", status: "medium" },
-      hybridML: { value: "Combines multiple signals, but updates overnight", status: "good" }
+      rulesBased: { value: "Siloed data, manual segments, static CSV exports", status: "poor" },
+      collaborativeFiltering: { value: "User-item interaction matrix, updated weekly via batch ETL", status: "medium" },
+      contentBased: { value: "Product catalog metadata only (SKU attributes)", status: "medium" },
+      hybridML: { value: "Federated data lake with overnight batch processing", status: "good" }
     },
     agentic: {
-      value: "Builds a complete picture: browsing, purchases, store visits, preferences — updated in real-time",
+      value: "Consumer 360° Graph: unified online + offline + real-time streaming events (CDP integration)",
       status: "excellent"
     }
   },
   {
-    dimension: "How It Thinks",
+    dimension: "Intelligence Engine",
     icon: Cpu,
     category: "Technical",
-    tooltip: "The underlying technology powering recommendations",
     traditional: {
-      rulesBased: { value: "Simple IF-THEN rules set by humans", status: "poor" },
-      collaborativeFiltering: { value: "Math formulas comparing user patterns", status: "medium" },
-      contentBased: { value: "Matches product descriptions & tags", status: "medium" },
-      hybridML: { value: "Trained models that score products", status: "good" }
+      rulesBased: { value: "Deterministic IF-THEN business logic (no ML)", status: "poor" },
+      collaborativeFiltering: { value: "Matrix factorization (ALS/SVD) — 'users like you bought...'", status: "medium" },
+      contentBased: { value: "TF-IDF similarity matching on product attributes", status: "medium" },
+      hybridML: { value: "Ensemble models (XGBoost + embeddings), retrained weekly", status: "good" }
     },
     agentic: {
-      value: "AI that reasons like a personal stylist — considers context, intent, and 'why' behind each choice",
+      value: "Transformer-based reasoning agent — understands intent, context & 'why' behind each decision",
       status: "excellent"
     }
   },
   {
-    dimension: "Business Rules",
+    dimension: "Merchandising Control",
     icon: Lightbulb,
     category: "Business",
-    tooltip: "How easily can merchandising goals be incorporated?",
     traditional: {
-      rulesBased: { value: "Hard-coded: always push high-margin items first", status: "poor" },
-      collaborativeFiltering: { value: "Business rules applied as afterthought", status: "medium" },
-      contentBased: { value: "Limited category-level controls", status: "medium" },
-      hybridML: { value: "Blended scoring, but rigid once set", status: "good" }
+      rulesBased: { value: "Hard-coded priority: margin > stock > relevance", status: "poor" },
+      collaborativeFiltering: { value: "Post-hoc business filters applied after ranking", status: "medium" },
+      contentBased: { value: "Category-level boost/bury rules only", status: "medium" },
+      hybridML: { value: "Weighted multi-objective scoring, rigid once deployed", status: "good" }
     },
     agentic: {
-      value: "Naturally balances: margin goals, stock levels, promos, and seasonality — all while staying relevant to each shopper",
+      value: "Dynamic constraint injection: margin goals, inventory, promos, seasonality — balanced per shopper context",
       status: "excellent"
     }
   },
   {
-    dimension: "Personalization Level",
-    icon: Target,
+    dimension: "Personalisation Depth",
+    icon: Users,
     category: "Business",
-    tooltip: "How tailored is the experience for each individual?",
     traditional: {
-      rulesBased: { value: "Same experience for millions in each segment", status: "poor" },
-      collaborativeFiltering: { value: "~1,000 shopper groups, still broad", status: "medium" },
-      contentBased: { value: "Product-focused, not person-focused", status: "medium" },
-      hybridML: { value: "Smaller segments, but still 'buckets' of people", status: "good" }
+      rulesBased: { value: "5-10 macro-segments (Age × Gender × Region)", status: "poor" },
+      collaborativeFiltering: { value: "~1K user clusters via k-means clustering", status: "medium" },
+      contentBased: { value: "Item-to-item similarity — ignores individual preferences", status: "medium" },
+      hybridML: { value: "~50K micro-segments with recency decay weighting", status: "good" }
     },
     agentic: {
-      value: "True 1-to-1: every shopper sees a uniquely curated experience based on their individual journey",
+      value: "True 1:1 personalisation — individual reasoning per session with real-time intent detection",
       status: "excellent"
     }
   },
   {
-    dimension: "Speed",
+    dimension: "Response Latency",
     icon: Clock,
     category: "Technical",
-    tooltip: "How fast does the system respond?",
     traditional: {
-      rulesBased: { value: "Instant (pre-calculated overnight)", status: "good" },
-      collaborativeFiltering: { value: "Noticeable delay (200-500ms)", status: "medium" },
-      contentBased: { value: "Quick (50-150ms)", status: "good" },
-      hybridML: { value: "Slower due to complexity (300-800ms)", status: "medium" }
+      rulesBased: { value: "<10ms (pre-computed lookup tables)", status: "good" },
+      collaborativeFiltering: { value: "200-500ms (sparse matrix operations at query time)", status: "medium" },
+      contentBased: { value: "50-150ms (vector similarity search)", status: "good" },
+      hybridML: { value: "300-800ms (multi-model inference chain)", status: "medium" }
     },
     agentic: {
-      value: "Under 50ms — faster than a blink, even with deep reasoning",
+      value: "<50ms — optimised KV-cache + speculative decoding, faster than page load",
       status: "excellent"
     }
   },
   {
-    dimension: "Sales Conversion",
+    dimension: "Conversion Impact",
     icon: TrendingUp,
     category: "ROI",
-    tooltip: "Impact on turning browsers into buyers",
     traditional: {
-      rulesBased: { value: "Baseline — no lift", status: "poor" },
-      collaborativeFiltering: { value: "+8-12% improvement", status: "medium" },
-      contentBased: { value: "+5-10% improvement", status: "medium" },
-      hybridML: { value: "+15-20% improvement", status: "good" }
+      rulesBased: { value: "Baseline (0% lift)", status: "poor" },
+      collaborativeFiltering: { value: "+8-12% CVR lift (limited by cold-start)", status: "medium" },
+      contentBased: { value: "+5-10% lift (good for similar items only)", status: "medium" },
+      hybridML: { value: "+15-20% CVR improvement", status: "good" }
     },
     agentic: {
-      value: "+35-45% conversion lift — products shown actually match what shoppers want to buy",
+      value: "+35-45% conversion lift — products ranked by actual purchase probability per individual",
       status: "excellent"
     }
   },
   {
-    dimension: "Return Rates",
+    dimension: "Return Rate Impact",
     icon: BarChart3,
     category: "ROI",
-    tooltip: "Impact on costly product returns",
     traditional: {
-      rulesBased: { value: "No consideration of fit or suitability", status: "poor" },
-      collaborativeFiltering: { value: "Assumes 'similar people = similar fit'", status: "medium" },
-      contentBased: { value: "Basic size filtering only", status: "medium" },
-      hybridML: { value: "Some learning from past returns", status: "good" }
+      rulesBased: { value: "No fit/suitability modelling", status: "poor" },
+      collaborativeFiltering: { value: "Assumes cohort preferences = individual fit", status: "medium" },
+      contentBased: { value: "Static size filters, no silhouette understanding", status: "medium" },
+      hybridML: { value: "-10-15% via historical return signal features", status: "good" }
     },
     agentic: {
-      value: "40% fewer returns — AI predicts fit confidence based on personal purchase & return history",
+      value: "-40% returns — personal fit confidence scoring using body type affinity + return history analysis",
       status: "excellent"
     }
   },
   {
-    dimension: "Why This Product?",
+    dimension: "Explainability",
     icon: Eye,
     category: "Business",
-    tooltip: "Can you explain the recommendation to customers and stakeholders?",
     traditional: {
-      rulesBased: { value: "Only shows which rule fired", status: "poor" },
-      collaborativeFiltering: { value: "Black box — can't explain why", status: "poor" },
-      contentBased: { value: "Shows matching attributes", status: "medium" },
-      hybridML: { value: "Technical scores, hard to interpret", status: "good" }
+      rulesBased: { value: "Rule audit logs (low business insight)", status: "poor" },
+      collaborativeFiltering: { value: "Black-box similarity scores — cannot explain 'why'", status: "poor" },
+      contentBased: { value: "Attribute overlap reports", status: "medium" },
+      hybridML: { value: "SHAP values & feature importance (technical only)", status: "good" }
     },
     agentic: {
-      value: "Clear reasoning: 'Recommended because you love wrap dresses and this fits your usual size'",
+      value: "Natural language reasoning: 'Recommended because you love wrap silhouettes & this matches your size preference'",
       status: "excellent"
     }
   },
   {
-    dimension: "New Customers",
+    dimension: "Cold-Start Handling",
     icon: Zap,
     category: "Technical",
-    tooltip: "How well does it work for first-time visitors?",
     traditional: {
-      rulesBased: { value: "Shows bestsellers to everyone", status: "poor" },
-      collaborativeFiltering: { value: "No recommendations until they shop more", status: "poor" },
-      contentBased: { value: "Can only match products they've viewed", status: "medium" },
-      hybridML: { value: "Some experimentation to learn preferences", status: "good" }
+      rulesBased: { value: "Falls back to bestsellers for all new users", status: "poor" },
+      collaborativeFiltering: { value: "No signal until 10+ interactions (data sparsity)", status: "poor" },
+      contentBased: { value: "Requires viewed products to make matches", status: "medium" },
+      hybridML: { value: "Contextual bandits for explore/exploit tradeoff", status: "good" }
     },
     agentic: {
-      value: "Instantly infers preferences from first few clicks — no 'cold start' problem",
+      value: "Zero-shot inference from first 2-3 clicks via transfer learning — no cold-start problem",
       status: "excellent"
     }
   },
   {
-    dimension: "Time to Results",
+    dimension: "Time to Value",
     icon: Clock,
     category: "ROI",
-    tooltip: "How long until you see business impact?",
     traditional: {
-      rulesBased: { value: "2-4 weeks (manual rule setup)", status: "medium" },
-      collaborativeFiltering: { value: "6-12 months (needs lots of data)", status: "poor" },
-      contentBased: { value: "2-3 months (catalog processing)", status: "medium" },
-      hybridML: { value: "6-9 months (training & tuning)", status: "medium" }
+      rulesBased: { value: "2-4 weeks (manual rule configuration)", status: "medium" },
+      collaborativeFiltering: { value: "6-12 months (requires large interaction dataset)", status: "poor" },
+      contentBased: { value: "2-3 months (catalog indexing & taxonomy)", status: "medium" },
+      hybridML: { value: "6-9 months (model training, validation, A/B testing)", status: "medium" }
     },
     agentic: {
-      value: "4-6 weeks — pre-trained AI adapts quickly to your catalog and customers",
+      value: "4-6 weeks — pre-trained foundation model fine-tuned on your catalog & customer data",
+      status: "excellent"
+    }
+  },
+  {
+    dimension: "Omnichannel Readiness",
+    icon: Layers,
+    category: "Business",
+    traditional: {
+      rulesBased: { value: "Channel-specific rule sets, no unified view", status: "poor" },
+      collaborativeFiltering: { value: "Online-only, store data rarely integrated", status: "poor" },
+      contentBased: { value: "Catalog-driven, channel-agnostic but limited", status: "medium" },
+      hybridML: { value: "Partial integration via data warehouse joins", status: "good" }
+    },
+    agentic: {
+      value: "Seamless online + in-store signals: web browse → store visit → app purchase = one journey",
       status: "excellent"
     }
   }
@@ -220,26 +226,26 @@ const ComparisonTable = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Target className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Side-by-Side Comparison</span>
+            <span className="text-sm font-medium text-primary">Technical & Business Deep Dive</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Why <span className="gradient-text">Agentic AI</span> is Different
+            Why <span className="gradient-text">Agentic AI</span> Outperforms
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Traditional personalisation treats shoppers as segments. Agentic AI treats every customer as an individual — with real understanding and reasoning.
+            A comprehensive comparison across data infrastructure, ML architecture, business flexibility, and measurable ROI — built for both technical and business stakeholders.
           </p>
         </div>
 
         {/* Category Legend */}
         <div className="flex flex-wrap justify-center gap-3 mb-4">
           <Badge variant="outline" className={`gap-2 px-3 py-1.5 ${categoryColors["Business"]}`}>
-            <span className="text-xs font-medium">💼 Business Impact</span>
+            <span className="text-xs font-medium">💼 Business</span>
           </Badge>
           <Badge variant="outline" className={`gap-2 px-3 py-1.5 ${categoryColors["Technical"]}`}>
-            <span className="text-xs font-medium">⚙️ How It Works</span>
+            <span className="text-xs font-medium">⚙️ Technical</span>
           </Badge>
           <Badge variant="outline" className={`gap-2 px-3 py-1.5 ${categoryColors["ROI"]}`}>
-            <span className="text-xs font-medium">📈 ROI & Results</span>
+            <span className="text-xs font-medium">📈 ROI</span>
           </Badge>
         </div>
 
@@ -273,26 +279,26 @@ const ComparisonTable = () => {
             <Table>
               <TableHeader>
                 <TableRow className="hover:bg-transparent border-border/50">
-                  <TableHead className="w-[200px] font-bold text-foreground">What Matters</TableHead>
-                  <TableHead className="min-w-[150px]">
+                  <TableHead className="w-[180px] font-bold text-foreground">Dimension</TableHead>
+                  <TableHead className="min-w-[160px]">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-destructive" />
                       <span className="text-xs font-medium">Rules-Based</span>
                     </div>
                   </TableHead>
-                  <TableHead className="min-w-[150px]">
+                  <TableHead className="min-w-[160px]">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-orange-500" />
                       <span className="text-xs font-medium">Collab. Filtering</span>
                     </div>
                   </TableHead>
-                  <TableHead className="min-w-[150px]">
+                  <TableHead className="min-w-[160px]">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-blue-500" />
                       <span className="text-xs font-medium">Content-Based</span>
                     </div>
                   </TableHead>
-                  <TableHead className="min-w-[150px]">
+                  <TableHead className="min-w-[160px]">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-emerald-500" />
                       <span className="text-xs font-medium">Hybrid ML</span>
@@ -315,13 +321,10 @@ const ComparisonTable = () => {
                       className={`border-border/30 ${idx % 2 === 0 ? 'bg-card/30' : 'bg-transparent'}`}
                     >
                       <TableCell className="font-semibold text-foreground">
-                        <div className="flex items-start gap-2">
-                          <DimensionIcon className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                        <div className="flex items-center gap-2">
+                          <DimensionIcon className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                           <div className="flex flex-col gap-1">
                             <span className="text-sm">{row.dimension}</span>
-                            <span className="text-[10px] text-muted-foreground font-normal leading-tight">
-                              {row.tooltip}
-                            </span>
                             <Badge 
                               variant="outline" 
                               className={`text-[10px] px-1.5 py-0 w-fit ${categoryColors[row.category]}`}
@@ -379,42 +382,42 @@ const ComparisonTable = () => {
           </div>
         </div>
 
-        {/* Summary Cards - Plain language benefits */}
+        {/* Summary Cards */}
         <div className="grid md:grid-cols-4 gap-6 mt-12">
           <div className="glass-card p-6 text-center hover-lift">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-purple-400" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mx-auto mb-4">
+              <Database className="w-6 h-6 text-blue-400" />
             </div>
-            <h4 className="font-semibold mb-2">Know Every Customer</h4>
+            <h4 className="font-semibold mb-2">Consumer 360° Data</h4>
             <p className="text-sm text-muted-foreground">
-              Not segments — individual shoppers with unique preferences and journeys
+              Unified customer graph with real-time CDP integration — not batch-processed silos
             </p>
           </div>
           <div className="glass-card p-6 text-center hover-lift">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center mx-auto mb-4">
-              <Brain className="w-6 h-6 text-blue-400" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-6 h-6 text-purple-400" />
             </div>
-            <h4 className="font-semibold mb-2">AI That Reasons</h4>
+            <h4 className="font-semibold mb-2">Reasoning, Not Rules</h4>
             <p className="text-sm text-muted-foreground">
-              Like a personal stylist who understands why, not just what
+              Transformer-based agent that understands intent — like a personal stylist at scale
             </p>
           </div>
           <div className="glass-card p-6 text-center hover-lift">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-6 h-6 text-emerald-400" />
             </div>
-            <h4 className="font-semibold mb-2">Proven Results</h4>
+            <h4 className="font-semibold mb-2">Measurable ROI</h4>
             <p className="text-sm text-muted-foreground">
-              +35% sales, -40% returns — measurable impact from day one
+              +35% conversion, -40% returns — proven metrics with 4-6 week time-to-value
             </p>
           </div>
           <div className="glass-card p-6 text-center hover-lift">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4">
               <Shield className="w-6 h-6 text-primary" />
             </div>
-            <h4 className="font-semibold mb-2">Clear Explanations</h4>
+            <h4 className="font-semibold mb-2">Auditable Decisions</h4>
             <p className="text-sm text-muted-foreground">
-              Know exactly why each product was recommended — no black boxes
+              Natural language explainability — no black-box models, full transparency
             </p>
           </div>
         </div>
