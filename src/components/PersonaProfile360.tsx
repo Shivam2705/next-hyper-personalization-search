@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { 
   User, 
   MapPin, 
@@ -16,9 +17,8 @@ import {
   Repeat,
   Target,
   Sparkles,
-  BarChart3,
-  Palette,
-  Ruler
+  ChevronDown,
+  Zap
 } from "lucide-react";
 import { Persona } from "@/pages/Login";
 
@@ -26,227 +26,240 @@ interface PersonaProfile360Props {
   persona: Persona;
 }
 
-// Detailed 360 data for each persona
 const persona360Data: Record<string, {
   identity: { icon: typeof User; label: string; value: string }[];
   behavior: { icon: typeof Search; label: string; value: string }[];
   purchase: { icon: typeof ShoppingBag; label: string; value: string }[];
   engagement: { icon: typeof Gift; label: string; value: string }[];
-  metrics: { label: string; value: string; percentage: number; color: string }[];
+  metrics: { label: string; value: string; percentage: number }[];
 }> = {
   emma: {
     identity: [
       { icon: MapPin, label: "Location", value: "Reading, UK" },
-      { icon: User, label: "Life Stage", value: "Working Professional, 32" },
-      { icon: Calendar, label: "Season Context", value: "Autumn/Winter Peak" },
-      { icon: Smartphone, label: "Primary Channel", value: "Mobile App (78%)" },
+      { icon: User, label: "Life Stage", value: "Professional, 32" },
+      { icon: Calendar, label: "Season", value: "Autumn/Winter" },
+      { icon: Smartphone, label: "Channel", value: "Mobile (78%)" },
     ],
     behavior: [
-      { icon: Search, label: "Recent Searches", value: "Work dresses, Blazers, Silk blouses" },
-      { icon: Eye, label: "Browse Categories", value: "Workwear (65%), Outerwear (20%)" },
-      { icon: Clock, label: "Peak Activity", value: "Mon-Fri 8-9am, 6-8pm" },
-      { icon: Target, label: "Filters Applied", value: "Size 10-12, Navy/Charcoal, £50-100" },
+      { icon: Search, label: "Searches", value: "Work dresses, Blazers" },
+      { icon: Eye, label: "Categories", value: "Workwear (65%)" },
+      { icon: Clock, label: "Peak Time", value: "Mon-Fri 8-9am" },
+      { icon: Target, label: "Filters", value: "Size 10-12, £50-100" },
     ],
     purchase: [
-      { icon: ShoppingBag, label: "Purchase History", value: "42 items in 18 months" },
-      { icon: Package, label: "Top Categories", value: "Dresses (35%), Trousers (28%)" },
-      { icon: Repeat, label: "Return Rate", value: "8% (Well below avg 15%)" },
-      { icon: CreditCard, label: "Avg Order Value", value: "£127 (Premium tier)" },
+      { icon: ShoppingBag, label: "History", value: "42 items / 18mo" },
+      { icon: Package, label: "Top Cat.", value: "Dresses (35%)" },
+      { icon: Repeat, label: "Returns", value: "8% (Low)" },
+      { icon: CreditCard, label: "AOV", value: "£127" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty Status", value: "Gold Member (3 years)" },
-      { icon: Star, label: "Email Engagement", value: "Opens 72% | Clicks 34%" },
-      { icon: TrendingUp, label: "Offer Sensitivity", value: "Low (quality > price)" },
-      { icon: Heart, label: "Saved Items", value: "18 items in wishlist" },
+      { icon: Gift, label: "Loyalty", value: "Gold (3yr)" },
+      { icon: Star, label: "Email", value: "72% open rate" },
+      { icon: TrendingUp, label: "Offers", value: "Low sensitivity" },
+      { icon: Heart, label: "Wishlist", value: "18 items" },
     ],
     metrics: [
-      { label: "Style Affinity", value: "Structured Fits", percentage: 94, color: "from-teal-500 to-cyan-500" },
-      { label: "Colour Preference", value: "Navy, Charcoal, White", percentage: 89, color: "from-blue-500 to-indigo-500" },
-      { label: "Size Confidence", value: "Size 10-12 (98% fit)", percentage: 98, color: "from-emerald-500 to-green-500" },
-      { label: "Price Alignment", value: "£70-120 sweet spot", percentage: 85, color: "from-purple-500 to-pink-500" },
+      { label: "Style Match", value: "Structured", percentage: 94 },
+      { label: "Size Fit", value: "10-12", percentage: 98 },
+      { label: "Price Fit", value: "£70-120", percentage: 85 },
+      { label: "Brand Affinity", value: "High", percentage: 89 },
     ]
   },
   david: {
     identity: [
       { icon: MapPin, label: "Location", value: "Manchester, UK" },
-      { icon: User, label: "Life Stage", value: "Family Dad, 2 kids (7, 9)" },
-      { icon: Calendar, label: "Season Context", value: "Back-to-School + Autumn" },
-      { icon: Smartphone, label: "Primary Channel", value: "Desktop (55%) + Mobile" },
+      { icon: User, label: "Life Stage", value: "Family Dad, 2 kids" },
+      { icon: Calendar, label: "Season", value: "Back-to-School" },
+      { icon: Smartphone, label: "Channel", value: "Desktop (55%)" },
     ],
     behavior: [
-      { icon: Search, label: "Recent Searches", value: "School uniforms, Boys jeans, Multi-packs" },
-      { icon: Eye, label: "Browse Categories", value: "Kidswear (55%), Menswear (35%)" },
-      { icon: Clock, label: "Peak Activity", value: "Weekends 10am-2pm" },
-      { icon: Target, label: "Filters Applied", value: "Age 7-9, Size L (mens), Under £30" },
+      { icon: Search, label: "Searches", value: "School uniforms" },
+      { icon: Eye, label: "Categories", value: "Kidswear (55%)" },
+      { icon: Clock, label: "Peak Time", value: "Weekends 10am" },
+      { icon: Target, label: "Filters", value: "Age 7-9, Under £30" },
     ],
     purchase: [
-      { icon: ShoppingBag, label: "Purchase History", value: "86 items in 24 months" },
-      { icon: Package, label: "Top Categories", value: "Kidswear (60%), Menswear (30%)" },
-      { icon: Repeat, label: "Return Rate", value: "5% (Excellent)" },
-      { icon: CreditCard, label: "Avg Order Value", value: "£68 (Multi-item)" },
+      { icon: ShoppingBag, label: "History", value: "86 items / 24mo" },
+      { icon: Package, label: "Top Cat.", value: "Kidswear (60%)" },
+      { icon: Repeat, label: "Returns", value: "5% (Excellent)" },
+      { icon: CreditCard, label: "AOV", value: "£68" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty Status", value: "Silver Member" },
-      { icon: Star, label: "Offer Response", value: "89% opens on deals emails" },
-      { icon: TrendingUp, label: "Offer Sensitivity", value: "High (value-driven)" },
-      { icon: Heart, label: "Multi-Buy Usage", value: "78% of orders use bundles" },
+      { icon: Gift, label: "Loyalty", value: "Silver Member" },
+      { icon: Star, label: "Deals", value: "89% open rate" },
+      { icon: TrendingUp, label: "Offers", value: "High sensitivity" },
+      { icon: Heart, label: "Bundles", value: "78% usage" },
     ],
     metrics: [
-      { label: "Value Priority", value: "Multi-pack buyer", percentage: 92, color: "from-teal-500 to-cyan-500" },
-      { label: "Durability Focus", value: "Denim & Cotton basics", percentage: 88, color: "from-blue-500 to-indigo-500" },
-      { label: "Size Confidence", value: "Kids 7-9, Mens L", percentage: 96, color: "from-emerald-500 to-green-500" },
-      { label: "Bundle Preference", value: "3+ items typical", percentage: 78, color: "from-purple-500 to-pink-500" },
+      { label: "Value Focus", value: "Multi-pack", percentage: 92 },
+      { label: "Size Fit", value: "Kids 7-9", percentage: 96 },
+      { label: "Price Fit", value: "Under £30", percentage: 88 },
+      { label: "Bundle Rate", value: "3+ items", percentage: 78 },
     ]
   },
   aisha: {
     identity: [
-      { icon: MapPin, label: "Location", value: "London, UK (Zone 2)" },
-      { icon: User, label: "Life Stage", value: "Young Professional, 27" },
-      { icon: Calendar, label: "Season Context", value: "Party Season Active" },
-      { icon: Smartphone, label: "Primary Channel", value: "Mobile App (92%)" },
+      { icon: MapPin, label: "Location", value: "London, Zone 2" },
+      { icon: User, label: "Life Stage", value: "Young Pro, 27" },
+      { icon: Calendar, label: "Season", value: "Party Season" },
+      { icon: Smartphone, label: "Channel", value: "Mobile (92%)" },
     ],
     behavior: [
-      { icon: Search, label: "Recent Searches", value: "Sequin dress, Statement blazer, Party outfit" },
-      { icon: Eye, label: "Browse Categories", value: "Eveningwear (50%), Statement (35%)" },
-      { icon: Clock, label: "Peak Activity", value: "Thurs-Sat 7-11pm" },
-      { icon: Target, label: "Filters Applied", value: "Size 10, New Arrivals, Bold colours" },
+      { icon: Search, label: "Searches", value: "Sequin, Statement" },
+      { icon: Eye, label: "Categories", value: "Evening (50%)" },
+      { icon: Clock, label: "Peak Time", value: "Thurs-Sat 7pm" },
+      { icon: Target, label: "Filters", value: "Size 10, New In" },
     ],
     purchase: [
-      { icon: ShoppingBag, label: "Purchase History", value: "38 items in 12 months" },
-      { icon: Package, label: "Top Categories", value: "Party wear (45%), Statement (35%)" },
-      { icon: Repeat, label: "Return Rate", value: "12% (At average)" },
-      { icon: CreditCard, label: "Avg Order Value", value: "£95 (Premium tier)" },
+      { icon: ShoppingBag, label: "History", value: "38 items / 12mo" },
+      { icon: Package, label: "Top Cat.", value: "Party (45%)" },
+      { icon: Repeat, label: "Returns", value: "12% (Avg)" },
+      { icon: CreditCard, label: "AOV", value: "£95" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty Status", value: "Platinum Member" },
-      { icon: Star, label: "New Arrivals", value: "First to browse (top 5%)" },
-      { icon: TrendingUp, label: "Trend Adoption", value: "Early adopter profile" },
-      { icon: Heart, label: "Social Saves", value: "45 Instagram saves" },
+      { icon: Gift, label: "Loyalty", value: "Platinum" },
+      { icon: Star, label: "New In", value: "Top 5% first" },
+      { icon: TrendingUp, label: "Trends", value: "Early adopter" },
+      { icon: Heart, label: "Social", value: "45 saves" },
     ],
     metrics: [
-      { label: "Trend Index", value: "Early adopter", percentage: 96, color: "from-teal-500 to-cyan-500" },
-      { label: "Statement Style", value: "Bold & eye-catching", percentage: 94, color: "from-pink-500 to-rose-500" },
-      { label: "Size Confidence", value: "Size 10 (92% fit)", percentage: 92, color: "from-emerald-500 to-green-500" },
-      { label: "Premium Affinity", value: "Quality-first buyer", percentage: 88, color: "from-purple-500 to-violet-500" },
+      { label: "Trend Index", value: "Early", percentage: 96 },
+      { label: "Size Fit", value: "Size 10", percentage: 92 },
+      { label: "Statement", value: "Bold", percentage: 94 },
+      { label: "Premium", value: "Quality-first", percentage: 88 },
     ]
   }
 };
 
-const signalGroupConfig = [
-  { key: "identity", title: "Identity & Context", icon: User, gradient: "from-teal-500 to-cyan-500" },
-  { key: "behavior", title: "Behavioral Signals", icon: Eye, gradient: "from-blue-500 to-indigo-500" },
-  { key: "purchase", title: "Purchase Intelligence", icon: ShoppingBag, gradient: "from-emerald-500 to-green-500" },
-  { key: "engagement", title: "Engagement & Loyalty", icon: Gift, gradient: "from-purple-500 to-pink-500" },
+const signalGroups = [
+  { key: "identity", title: "Identity", icon: User, color: "from-orange-500 to-amber-500" },
+  { key: "behavior", title: "Behavior", icon: Eye, color: "from-blue-500 to-cyan-500" },
+  { key: "purchase", title: "Purchase", icon: ShoppingBag, color: "from-emerald-500 to-green-500" },
+  { key: "engagement", title: "Engagement", icon: Gift, color: "from-purple-500 to-pink-500" },
 ];
 
 const PersonaProfile360 = ({ persona }: PersonaProfile360Props) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const data = persona360Data[persona.id] || persona360Data.emma;
 
   return (
-    <div className="mb-12">
-      {/* Section Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-          <BarChart3 className="w-6 h-6 text-primary-foreground" />
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-foreground">
-            {persona.name}'s Consumer <span className="gradient-text">360°</span> Profile
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Real-time signals powering personalized product ranking
-          </p>
-        </div>
-      </div>
-
-      {/* Profile Overview Card */}
-      <div className="glass-card p-6 mb-6">
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Persona Identity */}
-          <div className="flex items-center gap-4 lg:w-1/3">
+    <div className="mb-8">
+      {/* Compact Header Bar - Always Visible */}
+      <div 
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="glass-card p-4 cursor-pointer group transition-all duration-300 hover:border-primary/40"
+      >
+        <div className="flex items-center justify-between">
+          {/* Left: Avatar + Name + Key Stats */}
+          <div className="flex items-center gap-4">
             <div className="relative">
               <img 
                 src={persona.avatar} 
                 alt={persona.name}
-                className="w-20 h-20 rounded-full object-cover border-4 border-primary/30"
+                className="w-12 h-12 rounded-full object-cover border-2 border-primary/40"
               />
-              <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
+              <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <Zap className="w-3 h-3 text-primary-foreground" />
               </div>
             </div>
-            <div>
-              <h3 className="text-lg font-bold">{persona.name}</h3>
-              <p className="text-sm text-primary font-medium">{persona.title}</p>
-              <p className="text-xs text-muted-foreground">{persona.location}</p>
-              <div className="flex gap-2 mt-2">
-                <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full">{persona.style}</span>
-                <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded-full">{persona.priceRange}</span>
+            
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-bold text-foreground">{persona.name}</h3>
+                <span className="text-xs text-primary font-medium">360° Profile</span>
+              </div>
+              <div className="flex items-center gap-3 mt-1">
+                <span className="text-xs text-muted-foreground">{persona.location}</span>
+                <span className="text-xs px-2 py-0.5 bg-primary/10 text-primary rounded-full">{persona.style}</span>
               </div>
             </div>
           </div>
 
-          {/* Key Metrics */}
-          <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.metrics.map((metric, idx) => (
-              <div key={idx} className="bg-secondary/30 rounded-xl p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-muted-foreground">{metric.label}</span>
-                  <span className="text-xs font-bold text-primary">{metric.percentage}%</span>
-                </div>
-                <div className="w-full h-2 bg-secondary rounded-full overflow-hidden mb-2">
-                  <div 
-                    className={`h-full rounded-full bg-gradient-to-r ${metric.color}`}
-                    style={{ width: `${metric.percentage}%` }}
-                  />
-                </div>
-                <span className="text-xs font-medium text-foreground">{metric.value}</span>
+          {/* Center: Mini Metric Pills */}
+          <div className="hidden md:flex items-center gap-2">
+            {data.metrics.slice(0, 4).map((metric, idx) => (
+              <div key={idx} className="flex items-center gap-1.5 px-3 py-1.5 bg-secondary/50 rounded-full">
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-accent" />
+                <span className="text-xs text-muted-foreground">{metric.label}</span>
+                <span className="text-xs font-semibold text-foreground">{metric.percentage}%</span>
               </div>
             ))}
           </div>
+
+          {/* Right: Live indicator + Expand */}
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-xs text-muted-foreground hidden sm:inline">Live</span>
+            </div>
+            <ChevronDown 
+              className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} 
+            />
+          </div>
+        </div>
+
+        {/* Mobile Metrics - Below header on small screens */}
+        <div className="flex md:hidden items-center gap-2 mt-3 overflow-x-auto pb-1">
+          {data.metrics.map((metric, idx) => (
+            <div key={idx} className="flex items-center gap-1.5 px-2.5 py-1 bg-secondary/50 rounded-full flex-shrink-0">
+              <span className="text-xs text-muted-foreground">{metric.label}</span>
+              <span className="text-xs font-semibold text-primary">{metric.percentage}%</span>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Signal Groups Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {signalGroupConfig.map((group) => {
-          const signals = data[group.key as keyof typeof data] as { icon: typeof User; label: string; value: string }[];
-          
-          return (
-            <div key={group.key} className="glass-card p-5 hover-lift">
-              {/* Group Header */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${group.gradient} flex items-center justify-center`}>
-                  <group.icon className="w-5 h-5 text-white" />
-                </div>
-                <h4 className="font-semibold text-foreground text-sm">{group.title}</h4>
-              </div>
-
-              {/* Signals */}
-              <div className="space-y-3">
-                {signals.map((signal, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <signal.icon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <div className="min-w-0 flex-1">
-                      <div className="text-xs text-muted-foreground">{signal.label}</div>
-                      <div className="text-xs font-medium text-foreground leading-tight">
-                        {signal.value}
-                      </div>
-                    </div>
+      {/* Expanded Details Panel */}
+      <div 
+        className={`overflow-hidden transition-all duration-500 ease-out ${
+          isExpanded ? 'max-h-[600px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          {signalGroups.map((group) => {
+            const signals = data[group.key as keyof typeof data] as { icon: typeof User; label: string; value: string }[];
+            
+            return (
+              <div 
+                key={group.key} 
+                className="glass-card p-4 relative overflow-hidden group/card"
+              >
+                {/* Gradient accent line */}
+                <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${group.color}`} />
+                
+                {/* Header */}
+                <div className="flex items-center gap-2 mb-3">
+                  <div className={`w-7 h-7 rounded-lg bg-gradient-to-br ${group.color} flex items-center justify-center`}>
+                    <group.icon className="w-3.5 h-3.5 text-white" />
                   </div>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+                  <span className="text-xs font-semibold text-foreground">{group.title}</span>
+                </div>
 
-      {/* Live Signal Indicator */}
-      <div className="flex items-center justify-center gap-3 mt-6">
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs text-muted-foreground">
-            Signals update in real-time — these drive the rankings below
-          </span>
+                {/* Compact Signals */}
+                <div className="space-y-2">
+                  {signals.map((signal, idx) => (
+                    <div key={idx} className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-1.5 min-w-0">
+                        <signal.icon className="w-3 h-3 text-primary flex-shrink-0" />
+                        <span className="text-xs text-muted-foreground truncate">{signal.label}</span>
+                      </div>
+                      <span className="text-xs font-medium text-foreground text-right truncate max-w-[50%]">
+                        {signal.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom indicator */}
+        <div className="flex justify-center mt-3">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Sparkles className="w-3 h-3 text-primary" />
+            <span>These signals power the product rankings below</span>
+          </div>
         </div>
       </div>
     </div>
