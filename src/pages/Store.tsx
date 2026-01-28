@@ -25,6 +25,25 @@ import PastPurchasesSidebar from "@/components/PastPurchasesSidebar";
 import ProductFilters, { FilterState } from "@/components/ProductFilters";
 import { personas, Persona } from "./Login";
 
+// Curated product imagery (generated, description-accurate) to prevent mismatches
+import emmaNavyWrapDress from "@/assets/products/emma_navy_wrap_dress.jpg";
+import emmaWhiteCrepeBlouse from "@/assets/products/emma_white_crepe_blouse.jpg";
+import emmaGreyTailoredTrousers from "@/assets/products/emma_grey_tailored_trousers.jpg";
+import emmaCamelWoolCoat from "@/assets/products/emma_camel_wool_coat.jpg";
+
+import davidBoysNavyPolo from "@/assets/products/david_boys_navy_polo.jpg";
+import davidMensMultipackTees from "@/assets/products/david_mens_multipack_tees.jpg";
+import davidBoysDenimJacket from "@/assets/products/david_boys_denim_jacket.jpg";
+import davidMensCasualWeekendShirt from "@/assets/products/david_mens_casual_weekend_shirt.jpg";
+
+import aishaBlackSequinPartyDress from "@/assets/products/aisha_black_sequin_party_dress.jpg";
+import aishaFuchsiaSatinBlazer from "@/assets/products/aisha_fuchsia_satin_blazer.jpg";
+import aishaFloralMaxiDress from "@/assets/products/aisha_floral_maxi_dress.jpg";
+import aishaRedEveningGown from "@/assets/products/aisha_red_evening_gown.jpg";
+
+import classicBlackLeatherBag from "@/assets/products/classic_black_leather_bag.jpg";
+import tanSuedeAnkleBoots from "@/assets/products/tan_suede_ankle_boots.jpg";
+
 export interface Product {
   id: number;
   name: string;
@@ -53,7 +72,7 @@ const allProducts: Product[] = [
     name: "Navy Wrap Dress",
     price: 85,
     priceDisplay: "£85",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop",
+    image: emmaNavyWrapDress,
     category: "Workwear",
     popularity: 88,
     personalizationScores: {
@@ -88,7 +107,7 @@ const allProducts: Product[] = [
     name: "White Crepe Blouse",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1604575860824-f4a769e2bc80?w=400&h=600&fit=crop",
+    image: emmaWhiteCrepeBlouse,
     category: "Tops",
     popularity: 82,
     personalizationScores: {
@@ -123,7 +142,7 @@ const allProducts: Product[] = [
     name: "Grey Tailored Trousers",
     price: 55,
     priceDisplay: "£55",
-    image: "https://images.unsplash.com/photo-1551854838-212c50b4c184?w=400&h=600&fit=crop",
+    image: emmaGreyTailoredTrousers,
     category: "Workwear",
     popularity: 85,
     personalizationScores: {
@@ -158,7 +177,7 @@ const allProducts: Product[] = [
     name: "Camel Wool Coat",
     price: 120,
     priceDisplay: "£120",
-    image: "https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?w=400&h=600&fit=crop",
+    image: emmaCamelWoolCoat,
     category: "Outerwear",
     popularity: 90,
     personalizationScores: {
@@ -194,7 +213,7 @@ const allProducts: Product[] = [
     name: "Boys' Navy Polo Shirt",
     price: 12,
     priceDisplay: "£12",
-    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop",
+    image: davidBoysNavyPolo,
     category: "Kidswear",
     popularity: 94,
     personalizationScores: {
@@ -229,7 +248,7 @@ const allProducts: Product[] = [
     name: "Men's Cotton Multi-Pack Tees (5)",
     price: 25,
     priceDisplay: "£25",
-    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=600&fit=crop",
+    image: davidMensMultipackTees,
     category: "Menswear Basics",
     popularity: 96,
     personalizationScores: {
@@ -264,7 +283,7 @@ const allProducts: Product[] = [
     name: "Boys' Denim Jacket",
     price: 28,
     priceDisplay: "£28",
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=400&h=600&fit=crop",
+    image: davidBoysDenimJacket,
     category: "Kidswear",
     popularity: 88,
     personalizationScores: {
@@ -299,7 +318,7 @@ const allProducts: Product[] = [
     name: "Men's Casual Weekend Shirt",
     price: 35,
     priceDisplay: "£35",
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop",
+    image: davidMensCasualWeekendShirt,
     category: "Menswear",
     popularity: 82,
     personalizationScores: {
@@ -335,7 +354,7 @@ const allProducts: Product[] = [
     name: "Black Sequin Party Dress",
     price: 89,
     priceDisplay: "£89",
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop",
+    image: aishaBlackSequinPartyDress,
     category: "Eveningwear",
     popularity: 78,
     personalizationScores: {
@@ -370,7 +389,7 @@ const allProducts: Product[] = [
     name: "Fuchsia Satin Blazer",
     price: 75,
     priceDisplay: "£75",
-    image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&h=600&fit=crop",
+    image: aishaFuchsiaSatinBlazer,
     category: "Statement Pieces",
     popularity: 72,
     personalizationScores: {
@@ -405,7 +424,7 @@ const allProducts: Product[] = [
     name: "Floral Maxi Dress",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop",
+    image: aishaFloralMaxiDress,
     category: "Statement Pieces",
     popularity: 75,
     personalizationScores: {
@@ -440,7 +459,7 @@ const allProducts: Product[] = [
     name: "Red Evening Gown",
     price: 95,
     priceDisplay: "£95",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=600&fit=crop",
+    image: aishaRedEveningGown,
     category: "Eveningwear",
     popularity: 70,
     personalizationScores: {
@@ -476,7 +495,7 @@ const allProducts: Product[] = [
     name: "Classic Black Leather Bag",
     price: 65,
     priceDisplay: "£65",
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&h=600&fit=crop",
+    image: classicBlackLeatherBag,
     category: "Accessories",
     popularity: 92,
     personalizationScores: {
@@ -511,7 +530,7 @@ const allProducts: Product[] = [
     name: "Tan Suede Ankle Boots",
     price: 85,
     priceDisplay: "£85",
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop",
+    image: tanSuedeAnkleBoots,
     category: "Footwear",
     popularity: 86,
     personalizationScores: {

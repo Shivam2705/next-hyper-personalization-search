@@ -2,6 +2,25 @@ import { ShoppingBag, Calendar, Star, TrendingUp, Package } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Persona } from "@/pages/Login";
 
+// Past purchase imagery (generated, description-accurate) to prevent mismatches
+import pastEmmaBlackTailoredBlazer from "@/assets/products/past_emma_black_tailored_blazer.jpg";
+import pastEmmaIvorySilkBlouse from "@/assets/products/past_emma_ivory_silk_blouse.jpg";
+import pastEmmaBlackPencilSkirt from "@/assets/products/past_emma_black_pencil_skirt.jpg";
+import pastEmmaCamelCashmereCardigan from "@/assets/products/past_emma_camel_cashmere_cardigan.jpg";
+import pastEmmaNudeCourtHeels from "@/assets/products/past_emma_nude_court_heels.jpg";
+
+import pastDavidBoysGreySchoolJumper from "@/assets/products/past_david_boys_grey_school_jumper.jpg";
+import pastDavidMensBlackJoggers from "@/assets/products/past_david_mens_black_joggers.jpg";
+import pastDavidBoysNavyRaincoat from "@/assets/products/past_david_boys_navy_raincoat.jpg";
+import pastDavidMensWhiteTshirt3pk from "@/assets/products/past_david_mens_white_tshirt_3pk.jpg";
+import pastDavidMensNavyZipHoodie from "@/assets/products/past_david_mens_navy_zip_hoodie.jpg";
+
+import pastAishaCobaltWrapDress from "@/assets/products/past_aisha_cobalt_wrap_dress.jpg";
+import pastAishaGoldStatementEarrings from "@/assets/products/past_aisha_gold_statement_earrings.jpg";
+import pastAishaOrangeCroppedBlazer from "@/assets/products/past_aisha_orange_cropped_blazer.jpg";
+import pastAishaBlackStrappyHeels from "@/assets/products/past_aisha_black_strappy_heels.jpg";
+import pastAishaTropicalPrintMidiSkirt from "@/assets/products/past_aisha_tropical_print_midi_skirt.jpg";
+
 interface PastPurchase {
   id: string;
   name: string;
@@ -19,7 +38,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep1",
       name: "Black Tailored Blazer",
-      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
+      image: pastEmmaBlackTailoredBlazer,
       price: "£89",
       date: "Jan 2026",
       category: "Workwear",
@@ -28,7 +47,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep2",
       name: "Ivory Silk Blouse",
-      image: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=200&h=250&fit=crop",
+      image: pastEmmaIvorySilkBlouse,
       price: "£52",
       date: "Dec 2025",
       category: "Tops",
@@ -37,7 +56,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep3",
       name: "Black Pencil Skirt",
-      image: "https://images.unsplash.com/photo-1577900232427-18219b9166a0?w=200&h=250&fit=crop",
+      image: pastEmmaBlackPencilSkirt,
       price: "£48",
       date: "Nov 2025",
       category: "Workwear",
@@ -46,7 +65,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep4",
       name: "Camel Cashmere Cardigan",
-      image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=200&h=250&fit=crop",
+      image: pastEmmaCamelCashmereCardigan,
       price: "£75",
       date: "Sep 2025",
       category: "Knitwear",
@@ -55,7 +74,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ep5",
       name: "Nude Court Heels",
-      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
+      image: pastEmmaNudeCourtHeels,
       price: "£68",
       date: "Aug 2025",
       category: "Footwear",
@@ -67,7 +86,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp1",
       name: "Boys' Grey School Jumper",
-      image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=200&h=250&fit=crop",
+      image: pastDavidBoysGreySchoolJumper,
       price: "£14",
       date: "Jan 2026",
       category: "Kidswear",
@@ -76,7 +95,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp2",
       name: "Men's Black Joggers",
-      image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=200&h=250&fit=crop",
+      image: pastDavidMensBlackJoggers,
       price: "£28",
       date: "Dec 2025",
       category: "Menswear",
@@ -85,7 +104,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp3",
       name: "Boys' Navy Raincoat",
-      image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=200&h=250&fit=crop",
+      image: pastDavidBoysNavyRaincoat,
       price: "£32",
       date: "Oct 2025",
       category: "Kidswear",
@@ -94,7 +113,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp4",
       name: "Men's White T-Shirt (3pk)",
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=250&fit=crop",
+      image: pastDavidMensWhiteTshirt3pk,
       price: "£16",
       date: "Sep 2025",
       category: "Menswear Basics",
@@ -103,7 +122,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "dp5",
       name: "Men's Navy Zip Hoodie",
-      image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200&h=250&fit=crop",
+      image: pastDavidMensNavyZipHoodie,
       price: "£35",
       date: "Aug 2025",
       category: "Menswear",
@@ -115,7 +134,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap1",
       name: "Cobalt Blue Wrap Dress",
-      image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop",
+      image: pastAishaCobaltWrapDress,
       price: "£72",
       date: "Jan 2026",
       category: "Eveningwear",
@@ -124,7 +143,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap2",
       name: "Gold Statement Earrings",
-      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&h=250&fit=crop",
+      image: pastAishaGoldStatementEarrings,
       price: "£32",
       date: "Dec 2025",
       category: "Accessories",
@@ -133,7 +152,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap3",
       name: "Orange Cropped Blazer",
-      image: "https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=200&h=250&fit=crop",
+      image: pastAishaOrangeCroppedBlazer,
       price: "£68",
       date: "Nov 2025",
       category: "Statement Pieces",
@@ -142,7 +161,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap4",
       name: "Black Strappy Heels",
-      image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=200&h=250&fit=crop",
+      image: pastAishaBlackStrappyHeels,
       price: "£85",
       date: "Sep 2025",
       category: "Footwear",
@@ -151,7 +170,7 @@ const pastPurchasesByPersona: Record<string, PastPurchase[]> = {
     {
       id: "ap5",
       name: "Tropical Print Midi Skirt",
-      image: "https://images.unsplash.com/photo-1583496661160-fb5886a0edd3?w=200&h=250&fit=crop",
+      image: pastAishaTropicalPrintMidiSkirt,
       price: "£48",
       date: "Aug 2025",
       category: "Statement Pieces",
@@ -246,7 +265,7 @@ const PastPurchasesSidebar = ({ persona }: PastPurchasesSidebarProps) => {
                 alt={purchase.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=200&h=250&fit=crop';
+                  e.currentTarget.src = '/placeholder.svg';
                 }}
               />
             </div>
