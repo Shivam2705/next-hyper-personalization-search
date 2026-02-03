@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import Customer360Chart from "@/components/Customer360Chart";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ComparisonTable from "@/components/ComparisonTable";
+import ChoiceOverloadSection from "@/components/ChoiceOverloadSection";
 
 const valueProps = [
   {
@@ -185,6 +186,9 @@ const Landing = () => {
 
       {/* How It Works - Enhanced Section */}
       <HowItWorksSection />
+
+      {/* Choice Overload vs Agentic Curation */}
+      <ChoiceOverloadSection />
 
       {/* Value Proposition */}
       <section className="section-padding relative bg-gradient-to-b from-background via-card/30 to-background">
