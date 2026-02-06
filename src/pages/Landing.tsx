@@ -1,15 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { 
-  Brain, 
-  Target, 
-  Sparkles, 
-  Users, 
-  TrendingUp, 
-  Shield,
-  ArrowRight,
-  Zap,
-  RefreshCw
-} from "lucide-react";
+import { Brain, Target, Sparkles, Users, TrendingUp, Shield, ArrowRight, Zap, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Customer360Chart from "@/components/Customer360Chart";
 import HowItWorksSection from "@/components/HowItWorksSection";
@@ -20,27 +10,27 @@ const valueProps = [
   {
     icon: TrendingUp,
     title: "Increased Conversion",
-    description: "Personalized product ordering leads to 35% higher conversion rates",
-    metric: "+35%"
+    description: "Personalized product ordering leads to 30% higher conversion rates",
+    metric: "+30%",
   },
   {
     icon: RefreshCw,
     title: "Reduced Returns",
     description: "AI-driven fit confidence lowers return rates significantly",
-    metric: "-40%"
+    metric: "-35%",
   },
   {
     icon: Users,
     title: "Customer Lifetime Value",
     description: "Deeper engagement drives repeat purchases and loyalty",
-    metric: "+28%"
+    metric: "+28%",
   },
   {
     icon: Zap,
     title: "Real-Time Decisions",
     description: "Agentic AI makes ranking decisions in milliseconds",
-    metric: "<50ms"
-  }
+    metric: "<50ms",
+  },
 ];
 
 // How it works data moved to HowItWorksSection component
@@ -60,10 +50,7 @@ const Landing = () => {
             <span className="font-bold text-lg">NEXT</span>
             <span className="text-primary text-sm font-medium">Agentic AI</span>
           </div>
-          <Button 
-            onClick={() => navigate("/login")}
-            className="bg-primary hover:bg-primary/90"
-          >
+          <Button onClick={() => navigate("/login")} className="bg-primary hover:bg-primary/90">
             Experience Demo
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
@@ -75,37 +62,37 @@ const Landing = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-primary/5 to-transparent" />
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute top-40 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-        
+
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Agentic AI for Retail</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Every Shopper Sees a
             <br />
             <span className="gradient-text">Different NEXT</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Agentic AI transforms static catalogs into dynamically personalized experiences. 
-            Products, imagery, and narratives adapt in real-time based on individual shopper intelligence.
+            Agentic AI transforms static catalogs into dynamically personalized experiences. Products, imagery, and
+            narratives adapt in real-time based on individual shopper intelligence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={() => navigate("/login")}
               className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 text-primary-foreground"
             >
               Experience Demo
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
-              onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById("solution")?.scrollIntoView({ behavior: "smooth" })}
               className="text-lg px-8 py-6 border-border hover:bg-secondary"
             >
               Learn More
@@ -122,8 +109,8 @@ const Landing = () => {
               The <span className="gradient-text">Hyper-Personalization</span> Solution
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Move beyond rule-based recommendations. Our agentic approach understands context, 
-              predicts intent, and delivers individually curated shopping journeys.
+              Move beyond rule-based recommendations. Our agentic approach understands context, predicts intent, and
+              delivers individually curated shopping journeys.
             </p>
           </div>
 
@@ -134,8 +121,8 @@ const Landing = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Agentic Intelligence</h3>
               <p className="text-muted-foreground">
-                Unlike traditional ML models, our AI agent reasons about each shopper, 
-                making contextual decisions about product ranking and cross-sell strategy.
+                Unlike traditional ML models, our AI agent reasons about each shopper, making contextual decisions about
+                product ranking and cross-sell strategy.
               </p>
             </div>
 
@@ -145,8 +132,8 @@ const Landing = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Consumer 360° Foundation</h3>
               <p className="text-muted-foreground">
-                Every decision powered by a unified customer view — combining online behavior, 
-                store visits, purchase history, and engagement signals.
+                Every decision powered by a unified customer view — combining online behavior, store visits, purchase
+                history, and engagement signals.
               </p>
             </div>
 
@@ -156,8 +143,8 @@ const Landing = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Explainable Decisions</h3>
               <p className="text-muted-foreground">
-                Every ranking decision comes with clear reasoning — from style match 
-                to return risk prediction. Full transparency.
+                Every ranking decision comes with clear reasoning — from style match to return risk prediction. Full
+                transparency.
               </p>
             </div>
           </div>
@@ -172,8 +159,8 @@ const Landing = () => {
               Consumer <span className="gradient-text">360°</span> Intelligence
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A complete, real-time view of every shopper. Interactive signals that power 
-              hyper-personalization decisions.
+              A complete, real-time view of every shopper. Interactive signals that power hyper-personalization
+              decisions.
             </p>
           </div>
 
@@ -224,15 +211,13 @@ const Landing = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
             <div className="relative z-10">
               <Sparkles className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                See Personalization in Action
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">See Personalization in Action</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Choose a shopper persona and watch the same NEXT catalog transform 
-                based on their unique preferences and behaviour.
+                Choose a shopper persona and watch the same NEXT catalog transform based on their unique preferences and
+                behaviour.
               </p>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={() => navigate("/login")}
                 className="bg-primary hover:bg-primary/90 text-lg px-10 py-6 text-primary-foreground"
               >
