@@ -108,10 +108,10 @@ const Landing = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               The <span className="gradient-text">Hyper-Personalization</span> Solution
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Move beyond rule-based recommendations. Our agentic approach understands context, predicts intent, and
               delivers individually curated shopping journeys.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
