@@ -593,7 +593,7 @@ const allProducts: Product[] = [
 type SortOption = "hyper-personalization" | "popular" | "price-low" | "price-high" | "alphabetical" | "relevant";
 
 const sortOptions: { value: SortOption; label: string; icon: React.ElementType; description: string }[] = [
-  { value: "hyper-personalization", label: "Curated for you", icon: Brain, description: "AI-ranked for you" },
+  { value: "hyper-personalization", label: "Curated For You", icon: Brain, description: "AI-ranked for you" },
   { value: "popular", label: "Most Popular", icon: TrendingUp, description: "Best sellers" },
   { value: "price-low", label: "Price: Low to High", icon: DollarSign, description: "Budget first" },
   { value: "price-high", label: "Price: High to Low", icon: DollarSign, description: "Premium first" },
@@ -807,7 +807,7 @@ const Store = () => {
                   >
                     <Brain className="w-4 h-4" />
                     <div className="flex-1">
-                      <div className="font-medium">Hyper-Personalization Score</div>
+                      <div className="font-medium">Curated For You</div>
                       <div className="text-xs text-muted-foreground">AI-ranked for you</div>
                     </div>
                     {sortBy === "hyper-personalization" && <Sparkles className="w-4 h-4 text-primary" />}
