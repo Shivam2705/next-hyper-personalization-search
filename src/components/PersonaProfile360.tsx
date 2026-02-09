@@ -36,8 +36,8 @@ const persona360Data: Record<string, {
   emma: {
     identity: [
       { icon: MapPin, label: "Location", value: "Reading, UK" },
-      { icon: User, label: "Life Stage", value: "Professional, 32" },
-      { icon: Calendar, label: "Season", value: "Autumn/Winter" },
+      // { icon: User, label: "Life Stage", value: "Professional, 32" },
+      // { icon: Calendar, label: "Season", value: "Autumn/Winter" },
       { icon: Smartphone, label: "Channel", value: "Mobile (78%)" },
     ],
     behavior: [
@@ -53,23 +53,23 @@ const persona360Data: Record<string, {
       { icon: CreditCard, label: "AOV", value: "£127" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty", value: "Gold (3yr)" },
+      // { icon: Gift, label: "Rewards", value: "895 Points" },
       { icon: Star, label: "Email", value: "72% open rate" },
       { icon: TrendingUp, label: "Offers", value: "Low sensitivity" },
       { icon: Heart, label: "Wishlist", value: "18 items" },
     ],
     metrics: [
-      { label: "Style Match", value: "Structured", percentage: 94 },
-      { label: "Size Fit", value: "10-12", percentage: 98 },
-      { label: "Price Fit", value: "£70-120", percentage: 85 },
-      { label: "Brand Affinity", value: "High", percentage: 89 },
+      // { label: "Style Match", value: "Structured", percentage: 94 },
+      // { label: "Size Fit", value: "10-12", percentage: 98 },
+      // { label: "Price Fit", value: "£70-120", percentage: 85 },
+      // { label: "Brand Affinity", value: "High", percentage: 89 },
     ]
   },
   david: {
     identity: [
       { icon: MapPin, label: "Location", value: "Manchester, UK" },
-      { icon: User, label: "Life Stage", value: "Family Dad, 2 kids" },
-      { icon: Calendar, label: "Season", value: "Back-to-School" },
+      // { icon: User, label: "Life Stage", value: "Family Dad, 2 kids" },
+      // { icon: Calendar, label: "Season", value: "Back-to-School" },
       { icon: Smartphone, label: "Channel", value: "Desktop (55%)" },
     ],
     behavior: [
@@ -85,10 +85,10 @@ const persona360Data: Record<string, {
       { icon: CreditCard, label: "AOV", value: "£68" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty", value: "Silver Member" },
+      // { icon: Gift, label: "Rewards", value: "700 Points" },
       { icon: Star, label: "Deals", value: "89% open rate" },
       { icon: TrendingUp, label: "Offers", value: "High sensitivity" },
-      { icon: Heart, label: "Bundles", value: "78% usage" },
+      // { icon: Heart, label: "Bundles", value: "78% usage" },
     ],
     metrics: [
       { label: "Value Focus", value: "Multi-pack", percentage: 92 },
@@ -100,8 +100,8 @@ const persona360Data: Record<string, {
   aisha: {
     identity: [
       { icon: MapPin, label: "Location", value: "London, Zone 2" },
-      { icon: User, label: "Life Stage", value: "Young Pro, 27" },
-      { icon: Calendar, label: "Season", value: "Party Season" },
+      // { icon: User, label: "Life Stage", value: "Young Pro, 27" },
+      // { icon: Calendar, label: "Season", value: "Party Season" },
       { icon: Smartphone, label: "Channel", value: "Mobile (92%)" },
     ],
     behavior: [
@@ -117,7 +117,7 @@ const persona360Data: Record<string, {
       { icon: CreditCard, label: "AOV", value: "£95" },
     ],
     engagement: [
-      { icon: Gift, label: "Loyalty", value: "Platinum" },
+      // { icon: Gift, label: "Rewards", value: "200 Points" },
       { icon: Star, label: "New In", value: "Top 5% first" },
       { icon: TrendingUp, label: "Trends", value: "Early adopter" },
       { icon: Heart, label: "Social", value: "45 saves" },

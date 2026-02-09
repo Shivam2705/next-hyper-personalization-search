@@ -101,52 +101,29 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* What is the Solution */}
-      <section id="solution" className="section-padding relative">
+      {/* Value Proposition */}
+      <section className="section-padding relative bg-gradient-to-b from-background via-card/30 to-background">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              The <span className="gradient-text">Hyper-Personalization</span> Solution
+              Potential Benefits From <span className="gradient-text">Hyper-Personalisation</span>
             </h2>
-            {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Move beyond rule-based recommendations. Our agentic approach understands context, predicts intent, and
-              delivers individually curated shopping journeys.
-            </p> */}
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our hyper-personalization solution delivers tangible results across key retail metrics.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-card p-6 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {valueProps.map((prop) => (
+              <div key={prop.title} className="glass-card p-6 hover-lift text-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                  <prop.icon className="w-7 h-7 text-primary" />
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">{prop.metric}</div>
+                <h3 className="text-lg font-semibold mb-2">{prop.title}</h3>
+                <p className="text-sm text-muted-foreground">{prop.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Agentic Intelligence</h3>
-              <p className="text-muted-foreground">
-                Unlike traditional ML models, our AI agent reasons about each shopper, making contextual decisions about
-                product ranking and cross-sell strategy.
-              </p>
-            </div>
-
-            <div className="glass-card p-6 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Consumer 360° Foundation</h3>
-              <p className="text-muted-foreground">
-                Every decision powered by a unified customer view — combining online behavior, store visits, purchase
-                history, and engagement signals.
-              </p>
-            </div>
-
-            <div className="glass-card p-6 hover-lift">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Explainable Decisions</h3>
-              <p className="text-muted-foreground">
-                Every ranking decision comes with clear reasoning — from style match to return risk prediction. Full
-                transparency.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -168,41 +145,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Comparison Table Section */}
-      <ComparisonTable />
-
-      {/* How It Works - Enhanced Section */}
-      <HowItWorksSection />
-
-      {/* Choice Overload vs Agentic Curation */}
-      <ChoiceOverloadSection />
-
-      {/* Value Proposition */}
-      <section className="section-padding relative bg-gradient-to-b from-background via-card/30 to-background">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Measurable <span className="gradient-text">Business Impact</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our hyper-personalization solution delivers tangible results across key retail metrics.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valueProps.map((prop) => (
-              <div key={prop.title} className="glass-card p-6 hover-lift text-center">
-                <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                  <prop.icon className="w-7 h-7 text-primary" />
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{prop.metric}</div>
-                <h3 className="text-lg font-semibold mb-2">{prop.title}</h3>
-                <p className="text-sm text-muted-foreground">{prop.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section-padding relative">
